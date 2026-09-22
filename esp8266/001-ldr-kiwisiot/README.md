@@ -827,39 +827,6 @@ Advanced IoT / AI + IoT
 
 The goal is to provide a structured collection of practical IoT experiments for learners, educators, makers, and developers.
 
----
-
-# 🔑 SEO Keywords
-
-LDR sensor module ESP8266, LDR light sensor module project, ESP8266 LDR project, ESP8266 light sensor, LDR module Arduino, LDR sensor Arduino project, ESP8266 IoT project, KiwisIoT ESP8266, KiwisIoT LDR project, IoT light monitoring, light sensor IoT project, NodeMCU LDR project, ESP8266 analog sensor, LDR AO DO sensor module, Arduino IoT project, beginner IoT project, IoT sensor monitoring, smart lighting project, IoT education project.
-
----
-
-# 🏷️ Suggested GitHub Topics
-
-```text
-kiwisiot
-iot
-esp8266
-nodemcu
-ldr
-ldr-sensor
-ldr-module
-light-sensor
-arduino
-arduino-ide
-iot-project
-esp8266-project
-iot-dashboard
-sensor-monitoring
-wifi
-mqtt
-embedded
-stem-education
-iot-education
-```
-
----
 
 # 📁 Project Structure
 
