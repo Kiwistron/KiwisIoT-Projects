@@ -704,7 +704,7 @@ This repository contains only the **common Arduino + KiwisIoT setup**.
 
 ---
 
-# Repository Structure
+# Document Structure
 
 ```text
 kiwisiot-arduino-setup/
