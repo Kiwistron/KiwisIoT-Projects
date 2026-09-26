@@ -75,7 +75,7 @@ The setup guide covers:
 
 Connect the LDR sensor module to the ESP8266 NodeMCU.
 
-[LDR Circuit](images/circuit.png)
+![LDR Circuit](images/circuit.png)
 
 ### Connection
 
@@ -91,7 +91,7 @@ Connect the LDR sensor module to the ESP8266 NodeMCU.
 
 The complete Arduino code is available here:
 
-[`code/esp8266-ldr-kiwisiot.ino`](https://chatgpt.com/c/code/esp8266-ldr-kiwisiot.ino)
+[`code/esp8266-ldr-kiwisiot.ino`](code/esp8266-ldr-kiwisiot.ino)
 
 The code uses:
 
@@ -142,7 +142,7 @@ Configure the corresponding dashboard widgets using these channel IDs.
 
 ## Arduino Code Screenshot
 
-[Arduino Code](images/code.png)
+![Arduino Code](images/code.png)
 
 ## Upload the Code
 
@@ -189,7 +189,7 @@ Sent to KiwisIoT Channel 0: 954
 Sent to KiwisIoT Channel 1: BRIGHT
 ```
 
-[Serial Monitor Output](images/serial-monitor.png)
+![Serial Monitor Output](images/serial-monitor.png)
 
 ## Light Level Calculation
 
@@ -248,7 +248,7 @@ The project sends two types of data to the KiwisIoT dashboard:
 
 The dashboard can display the current light level and the corresponding light status.
 
-[KiwisIoT Dashboard Output](images/dashboard-output.png)
+![KiwisIoT Dashboard Output](images/dashboard-output.png)
 
 ## Data Flow
 
