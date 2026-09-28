@@ -164,7 +164,7 @@ TRIG → D1
 ECHO → D2
 ```
 
-[Ultrasonic Sensor Circuit](images/circuit.png)
+![Ultrasonic Sensor Circuit](images/circuit.png)
 
 > **Important:** The wiring shown above reflects the hardware configuration used for this project. Ultrasonic sensor modules can have different electrical requirements. For modules whose ECHO output exceeds ESP8266 GPIO voltage limits, appropriate level shifting should be used.
 
@@ -256,7 +256,7 @@ The dashboard displays the measured distance using the unit:
 cm
 ```
 
-[KiwisIoT Dashboard Output](images/dashboard-output.png)
+![KiwisIoT Dashboard Output](images/dashboard-output.png)
 
 ---
 
@@ -314,7 +314,7 @@ The program uses the ESP8266 Wi-Fi library and the KiwisIoT Arduino library:
 #include <KiwisIoT.h>
 ```
 
-[Arduino Code](images/code.png)
+![Arduino Code](images/code.png)
 
 ---
 
@@ -497,7 +497,7 @@ Sent to KiwisIoT Channel 0: 15.42 cm
 
 The project sends an updated distance measurement approximately every two seconds.
 
-[Serial Monitor Output](images/serial-monitor.png)
+![Serial Monitor Output](images/serial-monitor.png)
 
 ---
 
