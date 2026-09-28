@@ -1,388 +1,406 @@
-# LDR Light Sensor Module with ESP8266 and KiwisIoT
+# ESP8266 LDR Sensor IoT Project with KiwisIoT 💡
 
-> **Project ID:** KIWISIOT-001
-> **Category:** IoT / Sensors / Light Monitoring
-> **Difficulty:** Beginner
-> **Microcontroller:** ESP8266 NodeMCU
-> **Sensor:** LDR Light Sensor Module
-> **IoT Platform:** KiwisIoT
-> **Programming:** Arduino C/C++
-> **Communication:** Wi-Fi
+Monitor **light intensity in real time** using an **LDR sensor, ESP8266 NodeMCU, and KiwisIoT**.
 
-An IoT-based **light monitoring project using an LDR sensor module, ESP8266, and KiwisIoT**. The ESP8266 reads the light-level signal from the LDR sensor module and sends the sensor data through Wi-Fi to KiwisIoT for real-time monitoring and visualization.
+In this project, the ESP8266 reads the analog output from an LDR sensor module, processes the reading into a light-level value, classifies the lighting condition as **BRIGHT, MEDIUM, or DARK**, and sends the data to the **KiwisIoT IoT dashboard** over Wi-Fi.
 
-This project is suitable for **students, beginners, educators, makers, embedded developers, and IoT learners**.
+The dashboard displays both the numerical **light level** and the current **light status**.
 
 ---
 
-## 📌 Project Overview
+## 🚀 Project Highlights
 
-An **LDR (Light Dependent Resistor) sensor module** is an electronic sensor module that detects changes in surrounding light intensity.
+* ESP8266-based light intensity monitoring
+* LDR analog sensor reading
+* Real-time light-level visualization
+* BRIGHT, MEDIUM, and DARK status classification
+* KiwisIoT dashboard integration
+* Wi-Fi-based IoT monitoring
+* Beginner-friendly Arduino IoT project
+* Suitable for engineering and college IoT projects
 
-The module typically provides:
+---
 
-* **AO (Analog Output)** — provides a variable analog signal related to the detected light level.
-* **DO (Digital Output)** — provides a digital HIGH/LOW signal based on the adjustable threshold.
-* **VCC** — power supply.
-* **GND** — ground.
+## 🔎 Project Overview
 
-In this project, the **analog output (AO)** of the LDR sensor module is connected to the ESP8266 analog input.
+An **LDR (Light Dependent Resistor)** changes its electrical resistance according to the amount of light falling on it.
 
-The ESP8266 reads the sensor value and sends the data to KiwisIoT through Wi-Fi.
+The LDR sensor module is connected to the analog input of the ESP8266 NodeMCU. The ESP8266 reads the sensor value, calculates a project-specific light level, determines the light condition, and sends the results to KiwisIoT.
 
-### System Flow
+The project flow is:
 
 ```text
-       Light
-         ↓
-   LDR Sensor Module
-         ↓
-        AO
-         ↓
-      ESP8266
-         ↓
-       Wi-Fi
-         ↓
-     KiwisIoT
-         ↓
-   IoT Dashboard
-         ↓
-  Light Monitoring
-```
-
----
-
-# 🎯 What You Will Learn
-
-By completing this project, you will learn:
-
-* What an LDR sensor module is
-* How an LDR sensor module detects light
-* Difference between AO and DO
-* How to connect an LDR module to ESP8266
-* How to read analog sensor data
-* How to program ESP8266 using Arduino IDE
-* How to connect ESP8266 to Wi-Fi
-* How to send sensor data to KiwisIoT
-* How to create an IoT sensor dashboard
-* How a sensor-to-cloud IoT system works
-
----
-
-# ⭐ Key Features
-
-* LDR sensor module based light detection
-* Analog light-level monitoring
-* ESP8266 Wi-Fi connectivity
-* KiwisIoT integration
-* Real-time IoT dashboard
-* Arduino IDE compatible
-* Beginner-friendly
-* Low-cost IoT experiment
-* Suitable for STEM and IoT education
-
----
-
-# 🧰 Components Required
-
-| Component         |    Quantity | Purpose                                |
-| ----------------- | ----------: | -------------------------------------- |
-| ESP8266 NodeMCU   |           1 | Microcontroller and Wi-Fi connectivity |
-| LDR Sensor Module |           1 | Detects light intensity                |
-| Breadboard        |           1 | Prototyping                            |
-| Jumper Wires      | As required | Electrical connections                 |
-| USB Cable         |           1 | Programming and power                  |
-| Computer          |           1 | Arduino IDE programming                |
-| Wi-Fi Network     |           1 | Internet connectivity                  |
-
----
-
-# 🔌 Circuit Connection
-
-The LDR sensor module is connected directly to the ESP8266.
-
-## LDR Sensor Module → ESP8266
-
-| LDR Module Pin | ESP8266 Pin   | Function                   |
-| -------------- | ------------- | -------------------------- |
-| VCC            | 3.3V          | Power                      |
-| GND            | GND           | Ground                     |
-| AO             | A0            | Analog light-level reading |
-| DO             | Optional GPIO | Digital threshold output   |
-
-### Recommended connection for this project
-
-For KiwisIoT continuous light monitoring, use:
-
-```text
-LDR Module AO → ESP8266 A0
-```
-
-The **DO pin is optional** and is not required when using the analog light-level value.
-
-> **Note:** LDR module pin labels and supply-voltage requirements can vary between module versions. Verify the labels printed on your specific module before powering it.
-
----
-
-# 📐 Circuit Diagram
-
-Place your actual circuit diagram in:
-
-```text
-circuit/circuit-diagram.png
-```
-
-Then display it in the README:
-
-```markdown
-![LDR sensor module connection with ESP8266](circuit/circuit-diagram.png)
-```
-
-Recommended diagram:
-
-```text
-       LDR SENSOR MODULE
-       ┌───────────────┐
- VCC ──┤ VCC           │
- GND ──┤ GND           │
- AO  ──┤ AO            │
- DO  ──┤ DO            │
-       └───────────────┘
-          │
-          │ AO
-          ▼
-       ESP8266
-          │
-          │ Wi-Fi
-          ▼
-       KiwisIoT
-```
-
----
-
-# ⚙️ How the LDR Sensor Module Works
-
-The LDR inside the sensor module changes its electrical characteristics according to the amount of light falling on it.
-
-The sensor module processes this change and provides an output signal.
-
-### Analog Output — AO
-
-The **AO pin** provides a variable analog signal.
-
-This signal can be read by the ESP8266 analog input.
-
-```text
-Light Level
-     ↓
 LDR Sensor
      ↓
-Analog Signal
+ESP8266 NodeMCU
      ↓
-AO
+Analog Reading
      ↓
-ESP8266 A0
+Light Level Calculation
      ↓
-Sensor Value
+BRIGHT / MEDIUM / DARK
+     ↓
+Wi-Fi
      ↓
 KiwisIoT
-```
-
-### Digital Output — DO
-
-The **DO pin** can be used as a threshold-based digital output.
-
-The onboard potentiometer can generally be adjusted to change the switching threshold.
-
-```text
-Light Level
      ↓
-LDR Module
-     ↓
-Threshold Comparison
-     ↓
-DO
-     ↓
-HIGH / LOW
-```
-
-For this project, **AO is used because KiwisIoT can display the changing sensor value rather than only a HIGH/LOW state**.
-
----
-
-# 🌐 IoT Data Flow
-
-The complete system works as follows:
-
-```text
-LDR Sensor Module
-       ↓
-      AO
-       ↓
-ESP8266 Analog Input
-       ↓
-   Data Reading
-       ↓
-     Wi-Fi
-       ↓
-   KiwisIoT
-       ↓
- Sensor Channel
-       ↓
-   Dashboard
+IoT Dashboard
 ```
 
 ---
 
-# 💻 Software Requirements
+## 💡 Why This Project?
 
-Install:
+This project demonstrates the complete path from a physical sensor to an IoT dashboard:
+
+```text
+LDR Sensor
+    ↓
+ESP8266
+    ↓
+Wi-Fi
+    ↓
+KiwisIoT
+    ↓
+Dashboard
+    ↓
+Real-Time Light Monitoring
+```
+
+It provides a simple example of how sensor data can be collected by an ESP8266, processed locally, and visualized through an IoT platform.
+
+The project can also be used as a starting point for more advanced applications such as smart lighting, environmental monitoring, and IoT automation.
+
+---
+
+## 📚 What You'll Learn
+
+By building this project, you will learn how to:
+
+* Connect an LDR sensor module to an ESP8266
+* Read an analog sensor value using `analogRead()`
+* Process an LDR reading into a light-level value
+* Classify light conditions using threshold values
+* Send sensor data from ESP8266 to KiwisIoT
+* Use KiwisIoT channels for different types of data
+* Display sensor readings on an IoT dashboard
+* Monitor light conditions remotely over Wi-Fi
+
+---
+
+## 🧰 Components Required
+
+| Component         | Quantity    |
+| ----------------- | ----------- |
+| ESP8266 NodeMCU   | 1           |
+| LDR Sensor Module | 1           |
+| Jumper Wires      | As required |
+| USB Cable         | 1           |
+| Computer          | 1           |
+
+---
+
+## 💻 Software Requirements
 
 * Arduino IDE
 * ESP8266 board package
 * KiwisIoT Arduino library
-* Required ESP8266 libraries
-* USB driver if required by your board
-* Internet-connected Wi-Fi
+* KiwisIoT account
+* Wi-Fi connection
+
+### Common KiwisIoT Setup
+
+Before starting this project, complete the common **KiwisIoT Arduino Setup Guide**.
+
+The setup guide covers:
+
+* Arduino IDE installation
+* ESP8266 board installation
+* ESP8266 board selection
+* KiwisIoT Arduino library installation
+* KiwisIoT account setup
+* Panel creation
+* Topic ID
+* Dashboard widgets
+* Widget configuration
+
+The common setup guide is available in the parent `esp8266` directory:
+
+[Open the KiwisIoT Arduino Setup Guide](../kiwisiot-arduino-setup/)
 
 ---
 
-# 🛠️ Installation and Setup
+## 🛠️ Technologies Used
 
-## Step 1 — Install Arduino IDE
-
-Install Arduino IDE on your computer.
-
-Open Arduino IDE after installation.
-
-Add your screenshot:
-
-```markdown
-![Arduino IDE installation for ESP8266 IoT project](images/01-arduino-ide-installation.png)
-```
+* ESP8266 NodeMCU
+* LDR Sensor Module
+* Arduino IDE
+* KiwisIoT Arduino Library
+* KiwisIoT IoT Dashboard
+* Wi-Fi
+* C++ / Arduino
 
 ---
 
-## Step 2 — Install ESP8266 Board Support
+## 🔌 Circuit Connection
 
-Open:
+The LDR sensor module provides an analog output that is read by the ESP8266.
 
-```text
-Arduino IDE
-    ↓
-File
-    ↓
-Preferences
+Connect the sensor as follows:
+
+| LDR Sensor Module | ESP8266 NodeMCU |
+| ----------------- | --------------- |
+| VCC               | 3.3V            |
+| GND               | GND             |
+| AO                | A0              |
+| DO                | Not used        |
+
+This project uses the **AO (Analog Output)** pin because the objective is to measure changing light levels.
+
+![LDR Circuit](images/circuit.png)
+
+---
+
+## 🔬 How the LDR Sensor Works
+
+An **LDR (Light Dependent Resistor)** is a light-sensitive component whose resistance changes according to the amount of light reaching its surface.
+
+The LDR sensor module converts this change into an analog signal that can be read by the ESP8266.
+
+The project reads the analog signal using:
+
+```cpp
+int rawValue = analogRead(LDR_PIN);
 ```
 
-Add the ESP8266 Board Manager URL.
-
-Then open:
+The project reads the ESP8266 analog input as a 10-bit value in the range:
 
 ```text
-Tools
-    ↓
-Board
-    ↓
-Boards Manager
+0 → 1023
 ```
 
-Search for:
+The actual reading can vary depending on the LDR module, lighting conditions, power supply, and environment.
+
+---
+
+## 📊 Light Level Calculation
+
+The raw LDR value is processed to create a project-specific **light level**.
+
+The code uses:
+
+```cpp
+int lightLevel = 1023 - rawValue;
+```
+
+This calculation reverses the raw reading so that a higher calculated light level represents a brighter condition in this project.
+
+The relationship is:
+
+```text
+More Light
+    ↓
+Lower Raw LDR Value
+    ↓
+Higher Calculated Light Level
+```
+
+For example, during testing:
+
+```text
+Raw LDR Value: 69
+Light Level:   954
+Light Status:  BRIGHT
+```
+
+The `rawValue` and `lightLevel` are therefore two different values.
+
+* **Raw LDR Value** → direct analog reading
+* **Light Level** → processed value used by the project
+
+---
+
+## 💡 Light Status Classification
+
+The project converts the calculated light level into three simple lighting conditions.
+
+| Light Level  | Status |
+| ------------ | ------ |
+| `700 – 1023` | BRIGHT |
+| `300 – 699`  | MEDIUM |
+| `0 – 299`    | DARK   |
+
+The classification is implemented using:
+
+```cpp
+if (lightLevel >= 700) {
+    lightStatus = "BRIGHT";
+}
+else if (lightLevel >= 300) {
+    lightStatus = "MEDIUM";
+}
+else {
+    lightStatus = "DARK";
+}
+```
+
+These threshold values are defined for this project and can be adjusted according to the sensor and application requirements.
+
+---
+
+## ☁️ KiwisIoT Dashboard
+
+The ESP8266 sends two values to KiwisIoT.
+
+| Channel | Data         | Example  |
+| ------- | ------------ | -------- |
+| `0`     | Light Level  | `954`    |
+| `1`     | Light Status | `BRIGHT` |
+
+The data flow is:
 
 ```text
 ESP8266
+   │
+   ├── Channel 0 → Light Level
+   │                  ↓
+   │              KiwisIoT Gauge
+   │
+   └── Channel 1 → Light Status
+                      ↓
+                  KiwisIoT Label
 ```
 
-Install the ESP8266 board package.
+This allows the dashboard to show both the numerical sensor value and an easy-to-understand status.
 
-Screenshot:
+![KiwisIoT Dashboard Output](images/dashboard-output.png)
 
-```markdown
-![ESP8266 board installation in Arduino IDE](images/02-esp8266-board-installation.png)
+---
+
+## ⚙️ Dashboard Configuration
+
+Create a KiwisIoT panel for the project and add the required widgets.
+
+### Light Level Widget
+
+Use a **Gauge** widget to display the calculated light level.
+
+Suggested configuration:
+
+```text
+Name: Light Level
+Channel ID: 0
+Minimum Value: 0
+Maximum Value: 1023
+Unit: Light Level
+```
+
+The Gauge should receive the value sent by:
+
+```cpp
+kiwisiot.send("0", String(lightLevel));
+```
+
+For example:
+
+```text
+Light Level: 954
 ```
 
 ---
 
-# 📡 Step 3 — Connect the LDR Sensor Module
+### Light Status Widget
 
-Connect the module:
+Add a **Label** widget to display the lighting condition.
+
+Suggested configuration:
 
 ```text
-LDR Module VCC → ESP8266 3.3V
-LDR Module GND → ESP8266 GND
-LDR Module AO  → ESP8266 A0
+Name: Light Status
+Channel ID: 1
 ```
 
-The DO connection is optional.
+The widget receives values such as:
 
-Add your actual hardware photograph:
-
-```markdown
-![LDR sensor module connected to ESP8266 NodeMCU](images/03-hardware-connection.jpg)
+```text
+BRIGHT
+MEDIUM
+DARK
 ```
+
+The status is sent using:
+
+```cpp
+kiwisiot.send("1", lightStatus);
+```
+
+> **Note:** The Channel ID configured in the dashboard must match the Channel ID used in the ESP8266 code.
 
 ---
 
-# 🌐 Step 4 — Configure KiwisIoT
+## 💻 Arduino Code
 
-Open your KiwisIoT account and create a new project.
+The complete Arduino code is available here:
 
-Create a sensor/channel for the LDR value.
+[View the Arduino Code](code/esp8266-ldr-kiwisiot.ino)
 
-Recommended naming:
+The program uses the ESP8266 Wi-Fi library and the KiwisIoT Arduino library:
 
-```text
-Project:
-LDR Light Monitoring
-
-Sensor:
-LDR
-
-Data Field:
-ldr_value
+```cpp
+#include <ESP8266WiFi.h>
+#include <KiwisIoT.h>
 ```
 
-Add your actual KiwisIoT configuration screenshot:
-
-```markdown
-![KiwisIoT LDR sensor project configuration](images/04-kiwisiot-setup.png)
-```
+![Arduino Code](images/code.png)
 
 ---
 
-# 🔑 Step 5 — Configure Wi-Fi
+## 🔐 Configure Wi-Fi and KiwisIoT
 
-Open:
-
-```text
-code/ldr_esp8266_kiwisiot.ino
-```
-
-Configure your Wi-Fi credentials.
-
-Example:
+Before uploading the program, update these values:
 
 ```cpp
 const char* ssid = "YOUR_WIFI_NAME";
-const char* password = "YOUR_WIFI_PASSWORD";
+const char* pass = "YOUR_WIFI_PASSWORD";
+
+const char* topic = "YOUR_DASHBOARD_TOPIC_ID";
 ```
 
-**Never publish your real Wi-Fi password, API key, device token, or private credentials on GitHub.**
+Replace:
 
-Use placeholders in public source code.
+```text
+YOUR_WIFI_NAME
+```
+
+with your Wi-Fi network name.
+
+Replace:
+
+```text
+YOUR_WIFI_PASSWORD
+```
+
+with your Wi-Fi password.
+
+Replace:
+
+```text
+YOUR_DASHBOARD_TOPIC_ID
+```
+
+with the Topic ID of the KiwisIoT panel created for this project.
+
+For example:
+
+```text
+const char* topic = "dash_xxxxxxxxxxxxx";
+```
+
+> **Security:** Never publish your actual Wi-Fi password or private credentials in a public GitHub repository.
 
 ---
 
-# 📝 Arduino Code
-
-The complete tested source code should be stored here:
-
-```text
-code/
-└── ldr_esp8266_kiwisiot.ino
-```
-
-Basic project logic:
+## 📝 Complete Arduino Code
 
 ```cpp
 /*
@@ -393,511 +411,487 @@ Basic project logic:
  */
 
 #include <ESP8266WiFi.h>
+#include <KiwisIoT.h>
 
 const char* ssid = "YOUR_WIFI_NAME";
-const char* password = "YOUR_WIFI_PASSWORD";
+const char* pass = "YOUR_WIFI_PASSWORD";
 
-const int LDR_PIN = A0;
+const char* topic = "YOUR_DASHBOARD_TOPIC_ID";
+
+#define LDR_PIN A0
+
+KiwisIoT kiwisiot(ssid, pass, topic);
+
+void sendLightData() {
+
+  int rawValue = analogRead(LDR_PIN);
+
+  int lightLevel = 1023 - rawValue;
+
+  String lightStatus;
+
+  if (lightLevel >= 700) {
+    lightStatus = "BRIGHT";
+  }
+  else if (lightLevel >= 300) {
+    lightStatus = "MEDIUM";
+  }
+  else {
+    lightStatus = "DARK";
+  }
+
+  Serial.println();
+  Serial.println("---------- LIGHT MONITORING ----------");
+
+  Serial.print("Raw LDR Value: ");
+  Serial.println(rawValue);
+
+  Serial.print("Light Level: ");
+  Serial.println(lightLevel);
+
+  Serial.print("Light Status: ");
+  Serial.println(lightStatus);
+
+  kiwisiot.send("0", String(lightLevel));
+
+  kiwisiot.send("1", lightStatus);
+
+  Serial.print("Sent to KiwisIoT Channel 0: ");
+  Serial.println(lightLevel);
+
+  Serial.print("Sent to KiwisIoT Channel 1: ");
+  Serial.println(lightStatus);
+}
 
 void setup() {
-    Serial.begin(115200);
 
-    // Connect ESP8266 to Wi-Fi
+  Serial.begin(115200);
 
-    // Initialize KiwisIoT
+  Serial.println();
+  Serial.println("    LDR LIGHT MONITORING    ");
+
+  pinMode(LDR_PIN, INPUT);
+
+  Serial.println("LDR initialized");
+
+  Serial.println("Connecting to KiwisIoT...");
+
+  kiwisiot.begin();
+
+  Serial.println("KiwisIoT initialized");
+  Serial.println("Starting light monitoring...");
 }
 
 void loop() {
 
-    // Read analog value from LDR module
-    int ldrValue = analogRead(LDR_PIN);
+  kiwisiot.run();
 
-    Serial.print("LDR Value: ");
-    Serial.println(ldrValue);
+  static unsigned long lastSend = 0;
 
-    // Send ldrValue to KiwisIoT
+  if (millis() - lastSend >= 2000) {
 
-    delay(5000);
+    lastSend = millis();
+
+    sendLightData();
+  }
+
+  delay(100);
 }
 ```
 
-> Replace the abbreviated KiwisIoT section with the actual tested KiwisIoT Arduino library/API code used by this project.
+---
+
+## ⬆️ Upload the Program
+
+After configuring the code:
+
+1. Connect the ESP8266 NodeMCU to your computer.
+2. Open `esp8266-ldr-kiwisiot.ino` in Arduino IDE.
+3. Select the appropriate ESP8266 board.
+4. Verify the program.
+5. Upload the code to the ESP8266.
+6. Open the Serial Monitor.
+7. Set the baud rate to:
+
+```text
+115200
+```
+
+Once the ESP8266 connects to KiwisIoT, it will begin sending light data to the configured dashboard.
 
 ---
 
-# ⬆️ Step 6 — Upload the Program
+## 🖥️ Serial Monitor Output
 
-Connect the ESP8266 to your computer.
+The ESP8266 prints the LDR readings and KiwisIoT transmission information to the Serial Monitor.
 
-Select:
-
-```text
-Tools → Board → ESP8266 NodeMCU
-```
-
-Select the correct COM port:
+A typical output looks like:
 
 ```text
-Tools → Port
+---------- LIGHT MONITORING ----------
+
+Raw LDR Value: 69
+Light Level: 954
+Light Status: BRIGHT
+
+Sent to KiwisIoT Channel 0: 954
+Sent to KiwisIoT Channel 1: BRIGHT
 ```
 
-Then:
+The project sends updated light information approximately every two seconds.
 
-1. Verify the code.
-2. Upload the program.
-3. Wait for the upload to finish.
-4. Open Serial Monitor.
-
-Screenshot:
-
-```markdown
-![Uploading LDR ESP8266 KiwisIoT Arduino code](images/05-upload-code.png)
-```
+![Serial Monitor Output](images/serial-monitor.png)
 
 ---
 
-# 🖥️ Step 7 — Check Serial Monitor
+## 🔄 Understanding the Data Flow
 
-Open:
+The project processes the sensor data in several stages.
+
+### 1. Read the LDR
+
+```cpp
+int rawValue = analogRead(LDR_PIN);
+```
+
+### 2. Calculate the Light Level
+
+```cpp
+int lightLevel = 1023 - rawValue;
+```
+
+### 3. Determine the Light Status
 
 ```text
-Tools → Serial Monitor
+700 and above → BRIGHT
+300 to 699    → MEDIUM
+Below 300     → DARK
 ```
 
-Use the baud rate configured in the program.
+### 4. Send the Light Level
 
-Example output:
+```cpp
+kiwisiot.send("0", String(lightLevel));
+```
+
+### 5. Send the Light Status
+
+```cpp
+kiwisiot.send("1", lightStatus);
+```
+
+The complete flow is:
 
 ```text
-Connecting to WiFi...
-WiFi connected
-
-LDR Value: 356
-LDR Value: 412
-LDR Value: 528
-LDR Value: 641
-```
-
-The actual values depend on the sensor module, lighting conditions, board, and module design.
-
-Screenshot:
-
-```markdown
-![ESP8266 LDR sensor module readings in Serial Monitor](images/06-serial-monitor.png)
-```
-
----
-
-# 📊 Step 8 — Monitor the Sensor on KiwisIoT
-
-Open your KiwisIoT dashboard.
-
-Add a suitable widget for the LDR sensor data.
-
-The final data flow is:
-
-```text
-LDR Module
+LDR Sensor
     ↓
-ESP8266
+Raw LDR Value
     ↓
-Wi-Fi
+Light Level
     ↓
-KiwisIoT
+Light Status
     ↓
-LDR Sensor Channel
+KiwisIoT Channel 0 + Channel 1
     ↓
-Dashboard Widget
-```
-
-Add your dashboard screenshot:
-
-```markdown
-![KiwisIoT dashboard displaying LDR sensor data from ESP8266](images/07-kiwisiot-dashboard.png)
-```
-
----
-
-# 📷 Installation Screenshots
-
-For a professional project guide, include screenshots for each important stage:
-
-```text
-images/
-│
-├── 01-arduino-ide-installation.png
-├── 02-esp8266-board-installation.png
-├── 03-hardware-connection.jpg
-├── 04-kiwisiot-setup.png
-├── 05-upload-code.png
-├── 06-serial-monitor.png
-├── 07-kiwisiot-dashboard.png
-└── 08-final-project.jpg
-```
-
-Use descriptive filenames instead of:
-
-```text
-IMG_1234.jpg
-Screenshot1.png
-image.png
+Dashboard
 ```
 
 ---
 
-# 📈 Expected Output
+## 🧪 Testing the Project
 
-When the project is working correctly:
+You can test the LDR by changing the amount of light reaching the sensor.
+
+### ☀️ Bright Light
+
+Place a flashlight or torch near the LDR.
+
+The calculated light level should increase and the project may display:
 
 ```text
-LDR Sensor Module
-        ↓
-     ESP8266
-        ↓
-     Wi-Fi
-        ↓
-    KiwisIoT
-        ↓
-    Dashboard
+Light Status: BRIGHT
 ```
-
-The sensor reading should change when the amount of light falling on the LDR changes.
 
 For example:
 
 ```text
-Normal Light  → Sensor Value
-Low Light     → Sensor Value
-Bright Light  → Sensor Value
+Raw LDR Value: 69
+Light Level: 954
+Light Status: BRIGHT
 ```
 
-> Do not assume that a higher ADC value always means brighter light. The direction depends on the particular LDR module's circuit design. Determine the relationship experimentally for your module.
+### 💡 Normal Room Lighting
 
----
+Place the sensor under normal room lighting.
 
-# 🧪 Experiments
-
-Try these experiments after completing the basic project.
-
-### Experiment 1 — Normal Room Light
-
-Observe the LDR sensor value under normal room lighting.
-
-### Experiment 2 — Cover the Sensor
-
-Cover the LDR sensor and observe how the reading changes.
-
-### Experiment 3 — Use a Flashlight
-
-Point a flashlight toward the LDR module and observe the sensor value.
-
-### Experiment 4 — Change Distance
-
-Move the flashlight closer and farther from the sensor.
-
-### Experiment 5 — Digital Threshold
-
-Connect the DO output to an ESP8266 GPIO and adjust the module's potentiometer to experiment with threshold detection.
-
----
-
-# 🚀 Project Extensions
-
-The basic project can be extended into more advanced IoT applications.
-
-## Smart Lighting
-
-Use the LDR reading to automatically control an LED or relay.
+The light level depends on the surrounding environment and may result in:
 
 ```text
-LDR
- ↓
-ESP8266
- ↓
-Threshold
- ↓
-Relay
- ↓
-Light
+BRIGHT
 ```
 
-## Remote Light Monitoring
+or:
 
-Monitor light levels remotely using KiwisIoT.
+```text
+MEDIUM
+```
 
-## Automated Classroom Lighting
+### 🌙 Low Light
 
-Use light measurements to create an automated classroom lighting system.
+Cover the LDR or move it into a darker environment.
 
-## Smart Home
+The calculated light level should decrease and may produce:
 
-Use LDR data as part of a smart-home automation system.
+```text
+Light Status: DARK
+```
 
-## Data Analytics
-
-Store historical sensor data and analyze light-level patterns.
-
-## AI + IoT
-
-Historical sensor data can be used for anomaly detection and intelligent automation experiments.
+> **Note:** Actual readings vary depending on the LDR module, lighting conditions, circuit, power supply, and environment.
 
 ---
 
-# 🔧 Troubleshooting
+## ❓ Why Use Two Channels?
 
-## 1. LDR value does not change
+This project sends both a numerical value and a status value.
+
+For example:
+
+```text
+Channel 0 → 954
+Channel 1 → BRIGHT
+```
+
+The numerical value provides the measured light level, while the status provides a simple interpretation.
+
+This makes the dashboard easier to understand without requiring the user to interpret the sensor value manually.
+
+---
+
+## 🛠️ Troubleshooting
+
+### LDR Value Does Not Change
 
 Check:
 
-* LDR module connection
 * VCC connection
 * GND connection
-* AO → A0 connection
-* Sensor surface
+* AO connection to A0
+* Sensor wiring
 * Lighting conditions
-* Serial Monitor
+* LDR sensor module
+* Sensor module potentiometer, if applicable
 
-Try covering the sensor and shining a flashlight on it.
+### Light Level Appears Inverted
 
----
+This project uses:
 
-## 2. ESP8266 is not detected
-
-Check:
-
-* USB cable
-* USB driver
-* COM port
-* ESP8266 board selection
-* USB connection
-
----
-
-## 3. ESP8266 cannot connect to Wi-Fi
-
-Check:
-
-* Wi-Fi SSID
-* Wi-Fi password
-* Network availability
-* Signal strength
-* ESP8266 power supply
-
----
-
-## 4. KiwisIoT does not receive data
-
-Check:
-
-* KiwisIoT project configuration
-* Device credentials
-* Sensor/channel configuration
-* Wi-Fi connection
-* MQTT/API configuration
-* Serial Monitor
-* KiwisIoT dashboard widget
-
----
-
-## 5. DO output is not changing
-
-Check:
-
-* DO connection
-* Module power
-* Potentiometer adjustment
-* Light level
-* ESP8266 GPIO configuration
-
-Remember that DO is a **threshold output**, while AO provides the changing analog signal.
-
----
-
-# 📋 Project Specifications
-
-| Specification           | Details                 |
-| ----------------------- | ----------------------- |
-| Project ID              | KIWISIOT-001            |
-| Project Name            | LDR Light Sensor Module |
-| Microcontroller         | ESP8266                 |
-| Board                   | ESP8266 NodeMCU         |
-| Sensor                  | LDR Sensor Module       |
-| Sensor Type             | Light Sensor            |
-| Analog Input            | A0                      |
-| Analog Output           | AO                      |
-| Digital Output          | DO                      |
-| Communication           | Wi-Fi                   |
-| IoT Platform            | KiwisIoT                |
-| Programming Language    | Arduino C/C++           |
-| Development Environment | Arduino IDE             |
-| Difficulty              | Beginner                |
-| Category                | IoT / Sensor Monitoring |
-
----
-
-# 🎓 Learning Outcomes
-
-After completing this project, learners should be able to:
-
-* Explain the purpose of an LDR sensor module.
-* Identify AO and DO outputs.
-* Connect an LDR sensor module to ESP8266.
-* Read analog sensor values.
-* Understand threshold-based digital output.
-* Program ESP8266 using Arduino IDE.
-* Connect ESP8266 to Wi-Fi.
-* Send sensor data to KiwisIoT.
-* Create a basic IoT dashboard.
-* Understand the sensor-to-cloud data flow.
-
----
-
-# ❓ Frequently Asked Questions
-
-## What is an LDR sensor module?
-
-An LDR sensor module is an electronic module that detects changes in light intensity using a light-dependent resistor and provides electrical output signals.
-
-## What is AO on an LDR sensor module?
-
-AO means **Analog Output**. It provides a variable signal that can be read by an analog input such as the ESP8266 A0 pin.
-
-## What is DO on an LDR sensor module?
-
-DO means **Digital Output**. It generally provides a HIGH/LOW signal according to a configurable light threshold.
-
-## Which LDR output should be used for KiwisIoT?
-
-For continuous light-level monitoring, **AO is normally the appropriate output** because it provides a variable sensor reading.
-
-## Can an LDR sensor module work with ESP8266?
-
-Yes. An LDR sensor module can be interfaced with an ESP8266 using its analog output, provided the module's supply and output voltage are compatible with the ESP8266 board.
-
-## Can LDR data be monitored remotely?
-
-Yes. The ESP8266 can read the LDR module and transmit the data over Wi-Fi to KiwisIoT for remote monitoring.
-
-## Can this project be used for automatic lighting?
-
-Yes. The LDR reading can be used to control an LED, relay, or other output device according to a defined light-level condition.
-
-## Is this project suitable for beginners?
-
-Yes. This project introduces sensor interfacing, analog input, ESP8266 programming, Wi-Fi connectivity, and IoT dashboard monitoring.
-
----
-
-# 🔗 Related KiwisIoT Projects
-
-This project is part of the KiwisIoT project collection.
-
-### Sensor Projects
-
-* [002 — DHT11 Temperature and Humidity with ESP8266](../002-dht11-esp8266-kiwisiot/)
-* [003 — DHT22 Temperature and Humidity with ESP8266](../003-dht22-esp8266-kiwisiot/)
-* [004 — BMP180 Pressure Sensor with ESP8266](../004-bmp180-esp8266-kiwisiot/)
-* [005 — DS18B20 Temperature Sensor with ESP8266](../005-ds18b20-esp8266-kiwisiot/)
-* [006 — MQ2 Gas Sensor with ESP8266](../006-mq2-esp8266-kiwisiot/)
-
----
-
-# 🗂️ KiwisIoT 200+ Project Collection
-
-This project is **Project 001** in the KiwisIoT project library.
-
-The collection is organized into progressive categories:
-
-```text
-001–050
-Sensors
-    ↓
-051–080
-Output Devices
-    ↓
-081–120
-Modules & Communication
-    ↓
-121–160
-IoT Applications
-    ↓
-161–200+
-Advanced IoT / AI + IoT
+```cpp
+int lightLevel = 1023 - rawValue;
 ```
 
-The goal is to provide a structured collection of practical IoT experiments for learners, educators, makers, and developers.
+This is intentional so that the calculated light level increases as the raw LDR reading decreases.
 
+If your sensor behaves differently, first check the raw LDR readings and then adjust the calculation if necessary.
 
-# 📁 Project Structure
+### Dashboard Does Not Receive Data
+
+Check:
+
+* Wi-Fi name
+* Wi-Fi password
+* Internet connection
+* KiwisIoT Topic ID
+* Channel IDs
+* Dashboard widget configuration
+* KiwisIoT Arduino library
+* ESP8266 connection
+
+### Widget Shows No Data
+
+Make sure the Channel ID in the widget matches the Channel ID used in the code.
+
+For example:
 
 ```text
-001-ldr-light-sensor-esp8266-kiwisiot/
+ESP8266 Code
+     ↓
+Channel 0
+     ↓
+KiwisIoT
+     ↓
+Light Level Widget
+     ↓
+Channel 0
+```
+
+For the status:
+
+```text
+ESP8266 Code
+     ↓
+Channel 1
+     ↓
+KiwisIoT
+     ↓
+Light Status Widget
+     ↓
+Channel 1
+```
+
+### Light Status Does Not Match the Environment
+
+The project uses:
+
+```text
+700 and above → BRIGHT
+300 to 699    → MEDIUM
+Below 300     → DARK
+```
+
+These are project-defined thresholds.
+
+You can adjust the values according to the readings obtained from your LDR sensor and the environment where the project is used.
+
+---
+
+## 🔒 Security
+
+Never publish sensitive credentials in a public GitHub repository.
+
+Do not commit:
+
+* Wi-Fi passwords
+* API keys
+* Access tokens
+* Account passwords
+* Private credentials
+
+Use placeholders such as:
+
+```text
+YOUR_WIFI_NAME
+YOUR_WIFI_PASSWORD
+YOUR_DASHBOARD_TOPIC_ID
+```
+
+Enter your actual credentials only in your local Arduino project.
+
+---
+
+## 🌱 Possible Applications
+
+An ESP8266 LDR monitoring system can be used as a starting point for:
+
+* Light intensity monitoring
+* Smart lighting systems
+* Room brightness monitoring
+* Automatic lighting projects
+* IoT sensor monitoring
+* Environmental monitoring
+* Embedded systems projects
+* Engineering and college IoT projects
+
+The project can also be extended by adding actuators or automation logic based on the measured light level.
+
+---
+
+## 📁 Project Structure
+
+```text
+001-ldr-kiwisiot/
 │
 ├── README.md
+├── LICENSE
+├── .gitignore
 │
 ├── code/
-│   └── ldr_esp8266_kiwisiot.ino
+│   └── esp8266-ldr-kiwisiot.ino
 │
-├── circuit/
-│   └── circuit-diagram.png
-│
-├── images/
-│   ├── 01-arduino-ide-installation.png
-│   ├── 02-esp8266-board-installation.png
-│   ├── 03-hardware-connection.jpg
-│   ├── 04-kiwisiot-setup.png
-│   ├── 05-upload-code.png
-│   ├── 06-serial-monitor.png
-│   ├── 07-kiwisiot-dashboard.png
-│   └── 08-final-project.jpg
-│
-└── docs/
-    └── troubleshooting.md
+└── images/
+    ├── circuit.png
+    ├── code.png
+    ├── serial-monitor.png
+    └── dashboard-output.png
 ```
 
 ---
 
-# 📜 License
+## 🔗 Related KiwisIoT Projects
 
-This project is provided for educational and development purposes.
+This project is part of the **KiwisIoT ESP8266 project collection**.
 
-See the repository license for the applicable terms.
+The common setup guide is available here:
+
+[Open the KiwisIoT Arduino Setup Guide](../kiwisiot-arduino-setup/)
+
+Other ESP8266 projects can be found in the parent directory.
 
 ---
 
-# 🌐 KiwisIoT
+## ❓ Frequently Asked Questions
 
-**KiwisIoT is an IoT platform for connecting devices, collecting sensor data, creating dashboards, and developing IoT applications.**
+### What is an LDR sensor?
+
+An LDR, or Light Dependent Resistor, is a light-sensitive component whose resistance changes according to the amount of light reaching it.
+
+### Can I connect an LDR sensor to an ESP8266?
+
+Yes. An LDR sensor module with an analog output can be connected to the ESP8266 analog input for light-level monitoring.
+
+### Which ESP8266 board is used in this project?
+
+This project uses an **ESP8266 NodeMCU** development board.
+
+### Which pin is used for the LDR?
+
+The analog output of the LDR module is connected to:
 
 ```text
-Learn
-  ↓
-Build
-  ↓
-Connect
-  ↓
-Monitor
-  ↓
-Analyze
-  ↓
-Create
+A0
 ```
 
+### Which KiwisIoT channels are used?
+
+```text
+Channel 0 → Light Level
+Channel 1 → Light Status
+```
+
+### Why does the project use `1023 - rawValue`?
+
+The calculation reverses the raw analog reading so that the project's calculated light level increases when the measured raw value decreases.
+
+### Does the LDR always produce the same reading?
+
+No. LDR readings can vary depending on the sensor module, lighting conditions, circuit, power supply, and surrounding environment.
+
+### Can I change the BRIGHT, MEDIUM, and DARK thresholds?
+
+Yes. The thresholds are defined in the Arduino code and can be changed according to your application.
+
+### Can this project be extended?
+
+Yes. Additional sensors, actuators, automation logic, alerts, charts, and other KiwisIoT dashboard widgets can be added to build a larger IoT application.
+
 ---
 
-# ⭐ Support the Project
+## 📌 Summary
 
-If this project helped you:
+This project demonstrates a simple **ESP8266 LDR IoT monitoring system** using KiwisIoT.
 
-* ⭐ Star the repository
-* 🔧 Build the experiment
-* 📚 Explore other KiwisIoT projects
-* 💡 Create your own modification
-* 🤝 Contribute improvements
-* 📢 Share the project with other learners
+The ESP8266 reads the LDR sensor, processes the analog reading into a light level, classifies the lighting condition, and sends the results to a KiwisIoT dashboard over Wi-Fi.
+
+The final dashboard provides:
+
+```text
+Light Level  → Numerical value
+Light Status → BRIGHT / MEDIUM / DARK
+```
+
+It provides a practical example of how an ESP8266 can collect sensor data and connect it to an IoT platform for remote monitoring.
 
 ---
 
-**Project ID:** KIWISIOT-001
-**Project:** LDR Light Sensor Module + ESP8266 + KiwisIoT
-**Collection:** KiwisIoT 200+ IoT Projects
+## 📄 License
+
+This project is licensed under the MIT License. See the `LICENSE` file for details.
