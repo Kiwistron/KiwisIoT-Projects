@@ -89,9 +89,7 @@ The setup guide covers:
 
 The common setup guide is available in the parent `esp8266` directory:
 
-```text
-../kiwisiot-arduino-setup/
-```
+[Open the KiwisIoT Arduino Setup Guide](../kiwisiot-arduino-setup/)
 
 ---
 
