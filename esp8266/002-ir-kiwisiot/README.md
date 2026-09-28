@@ -260,7 +260,7 @@ ESP8266
                          ↓
                     KiwisIoT
                          ↓
-                  Dashboard Widget
+                  Label Widget
 ```
 
 The dashboard can display the current object detection status received from the ESP8266.
@@ -271,7 +271,7 @@ The dashboard can display the current object detection status received from the 
 
 ## ⚙️ Dashboard Configuration
 
-Create a KiwisIoT panel for the project and add a widget suitable for displaying text or status information.
+Create a KiwisIoT panel for the project and add a **Label** widget suitable for displaying text or status information.
 
 ### Object Status Widget
 
