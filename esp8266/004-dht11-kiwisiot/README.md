@@ -144,9 +144,9 @@ Adafruit Unified Sensor
 
 ### Common KiwisIoT Setup
 
-Before starting this project, complete the common KiwisIoT Arduino setup.
+Before starting this project, complete the common **KiwisIoT Arduino Setup Guide**.
 
-The setup covers:
+The setup guide covers:
 
 * Arduino IDE installation
 * ESP8266 board installation
@@ -157,6 +157,10 @@ The setup covers:
 * Topic ID
 * Dashboard widgets
 * Widget configuration
+
+The common setup guide is available in the parent `esp8266` directory:
+
+[Open the KiwisIoT Arduino Setup Guide](../kiwisiot-arduino-setup/)
 
 ---
 
