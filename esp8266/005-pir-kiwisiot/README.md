@@ -807,8 +807,6 @@ The project can be extended by adding LEDs, buzzers, relays, counters, alerts, a
 005-pir-sensor-kiwisiot/
 │
 ├── README.md
-├── LICENSE
-├── .gitignore
 │
 ├── code/
 │   └── esp8266-pir-kiwisiot.ino
