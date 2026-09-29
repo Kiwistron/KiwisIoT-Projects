@@ -892,10 +892,13 @@ The project can also be extended by adding additional sensors, alerts, actuators
 
 ## 🔗 Related KiwisIoT Projects
 
-This project is part of the **KiwisIoT ESP8266 IoT project collection**.
+This project is part of the **KiwisIoT ESP8266 project collection**.
 
-Other projects in the collection demonstrate how different sensors can be connected to an ESP8266 and monitored through KiwisIoT.
+The common setup guide is available here:
 
+[Open the KiwisIoT Arduino Setup Guide](../kiwisiot-arduino-setup/)
+
+Other ESP8266 IoT projects can be found in the parent directory.
 ---
 
 ## ❓ Frequently Asked Questions
