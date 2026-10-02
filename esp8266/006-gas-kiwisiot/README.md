@@ -847,29 +847,19 @@ Yes. You can add LEDs, buzzers, relays, alerts, thresholds, additional sensors, 
 
 ## 📝 Summary
 
-This project demonstrates a simple **ESP8266 MQ-2 gas sensor monitoring system with KiwisIoT**.
+This project demonstrates a simple **ESP8266 gas sensor IoT monitoring system** using KiwisIoT.
 
-The ESP8266 reads the analog output of the MQ-2 sensor through A0 and sends the resulting sensor value to **KiwisIoT Channel 0** over Wi-Fi.
+The ESP8266 reads the analog output of the MQ-2 gas sensor and sends the sensor reading to a KiwisIoT dashboard over Wi-Fi.
 
-The KiwisIoT dashboard displays the sensor reading using a Gauge widget.
-
-The final data flow is:
+The final KiwisIoT dashboard provides:
 
 ```text
-MQ-2 Sensor
-     ↓
-ESP8266 A0
-     ↓
-Analog Sensor Value
-     ↓
-KiwisIoT Channel 0
-     ↓
-Gauge Widget
-     ↓
-KiwisIoT Dashboard
+Gas Level → Numerical sensor value
 ```
 
-This provides a practical example of connecting an analog gas sensor to an ESP8266 and monitoring its readings through an IoT dashboard.
+It provides a practical example of how an ESP8266 can connect an analog gas sensor to an IoT platform for remote gas level monitoring.
+
+**Note:** The value shown is the **raw sensor reading from the MQ-2**, not a calibrated gas concentration such as ppm.
 
 ---
 
