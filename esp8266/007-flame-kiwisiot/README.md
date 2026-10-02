@@ -390,7 +390,6 @@ This provides a visual indication on the KiwisIoT dashboard.
 
 > **Important:** The Channel IDs configured in the dashboard must match the Channel IDs used in the ESP8266 code.
 
-![KiwisIoT Dashboard Configuration](images/dashboard-config.png)
 
 ---
 
