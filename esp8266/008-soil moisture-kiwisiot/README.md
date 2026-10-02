@@ -134,7 +134,7 @@ The setup guide covers:
 
 The common setup guide is available in the parent `esp8266` directory:
 
-[Open the KiwisIoT Arduino Setup Guide](https://chatgpt.com/kiwisiot-arduino-setup/)
+[Open the KiwisIoT Arduino Setup Guide](../kiwisiot-arduino-setup/)
 
 ---
 
@@ -170,7 +170,7 @@ The main signal connection is:
 AO → A0
 ```
 
-[Soil Moisture Sensor Circuit](https://chatgpt.com/c/images/circuit.png)
+![Soil Moisture Sensor Circuit](images/circuit.png)
 
 > **Note:** The wiring shown reflects the hardware configuration used for this project.
 
@@ -277,7 +277,7 @@ ESP8266
                     Dashboard
 ```
 
-[KiwisIoT Dashboard Output](https://chatgpt.com/c/images/dashboard-output.png)
+![KiwisIoT Dashboard Output](images/dashboard-output.png)
 
 The dashboard provides:
 
@@ -385,7 +385,7 @@ This provides a visual indication of the soil condition.
 
 The complete Arduino code is available here:
 
-[View the Arduino Code](https://chatgpt.com/c/code/esp8266-soil-moisture-kiwisiot.ino)
+[View the Arduino Code](code/esp8266-soil_moisture-kiwisiot.ino)
 
 The program uses the ESP8266 Wi-Fi library and KiwisIoT Arduino library:
 
@@ -394,7 +394,7 @@ The program uses the ESP8266 Wi-Fi library and KiwisIoT Arduino library:
 #include <KiwisIoT.h>
 ```
 
-[Arduino Code](https://chatgpt.com/c/images/code.png)
+![Arduino Code](images/code.png)
 
 ---
 
@@ -448,7 +448,7 @@ const char* topic = "dash_xxxxxxxxxxxxx";
 ```cpp
 /*
  * Project: Soil Moisture Monitoring with ESP8266 and KiwisIoT
- * Project ID: KIWISIOT-007
+ * Project ID: KIWISIOT-008
  * Board: ESP8266 NodeMCU
  * Sensor: Soil Moisture Sensor
  */
@@ -599,7 +599,7 @@ Sent to KiwisIoT Channel 2: 1
 
 The project sends updated values approximately every two seconds.
 
-[Serial Monitor Output](https://chatgpt.com/c/images/serial-monitor.png)
+![Serial Monitor Output](images/serial-monitor.png)
 
 ---
 
@@ -947,12 +947,12 @@ The project can be extended by adding a relay, water pump, additional environmen
 ## 📁 Project Structure
 
 ```text
-007-soil-moisture-kiwisiot/
+008-soil moisture-kiwisiot/
 │
 ├── README.md
 │
 ├── code/
-│   └── esp8266-soil-moisture-kiwisiot.ino
+│   └── esp8266-soil_moisture-kiwisiot.ino
 │
 └── images/
     ├── circuit.png
@@ -969,7 +969,7 @@ This project is part of the **KiwisIoT ESP8266 project collection**.
 
 The common setup guide is available here:
 
-[Open the KiwisIoT Arduino Setup Guide](https://chatgpt.com/kiwisiot-arduino-setup/)
+[Open the KiwisIoT Arduino Setup Guide](../kiwisiot-arduino-setup/)
 
 Other ESP8266 IoT projects can be found in the parent directory.
 
