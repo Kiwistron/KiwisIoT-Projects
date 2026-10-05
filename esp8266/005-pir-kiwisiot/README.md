@@ -1,10 +1,10 @@
 # PIR Sensor ESP8266 IoT Project: Build a Real-Time Motion Detection System with KiwisIoT 🚶
 
-Build a real-time motion detection system using a **PIR sensor, ESP8266 NodeMCU, and KiwisIoT**.
+Build a **real-time motion detection system** using a **PIR sensor, ESP8266 NodeMCU, and KiwisIoT**.
 
-In this project, the ESP8266 reads the digital output of the PIR sensor and determines whether motion is detected. The motion status is then sent to the **KiwisIoT IoT dashboard** over Wi-Fi.
+In this project, the ESP8266 reads the digital output of the PIR sensor, determines whether motion is detected, and sends the motion status to the **KiwisIoT IoT dashboard** over Wi-Fi.
 
-The dashboard displays the motion status as **True** or **False**, allowing the sensor activity to be monitored remotely.
+The dashboard displays the motion status as **True** or **False**, providing a simple example of IoT-based motion monitoring.
 
 ---
 
@@ -820,15 +820,21 @@ The project can be extended by adding LEDs, buzzers, relays, counters, alerts, a
 
 ---
 
-## 🔗 Related KiwisIoT Projects
+## 🔗 Related KiwisIoT ESP8266 Projects
 
-This project is part of the **KiwisIoT ESP8266 project collection**.
+This project is part of the **KiwisIoT ESP8266 IoT project collection**.
 
-The common setup guide is available here:
+- [ESP8266 LDR Sensor IoT Project](../001-ldr-kiwisiot/)
+- [ESP8266 IR Sensor IoT Project](../002-ir-kiwisiot/)
+- [ESP8266 Ultrasonic Sensor IoT Project](../003-ultrasonic-kiwisiot/)
+- [ESP8266 DHT11 Temperature & Humidity IoT Project](../004-dht11-kiwisiot/)
+- [ESP8266 Gas Sensor IoT Project](../006-gas-kiwisiot/)
+- [ESP8266 Flame Sensor IoT Project](../007-flame-kiwisiot/)
+- [ESP8266 Soil Moisture IoT Project](../008-soil-moisture-kiwisiot/)
 
-[Open the KiwisIoT Arduino Setup Guide](../kiwisiot-arduino-setup/)
+For the common Arduino and KiwisIoT setup, see the:
 
-Other ESP8266 IoT projects can be found in the parent directory.
+[**KiwisIoT Arduino Setup Guide**](../kiwisiot-arduino-setup/)
 
 ---
 
