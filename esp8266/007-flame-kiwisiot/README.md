@@ -936,7 +936,7 @@ Explore other projects in the collection:
 - [ESP8266 DHT11 Temperature & Humidity IoT Project](../004-dht11-kiwisiot/)
 - [ESP8266 PIR Motion Sensor IoT Project](../005-pir-sensor-kiwisiot/)
 - [ESP8266 Gas Sensor IoT Project](../006-gas-kiwisiot/)
-- [ESP8266 Soil Moisture IoT Project](../008-soil-moisture-kiwisiot/)
+- [ESP8266 Soil Moisture IoT Project](../008-soil moisture-kiwisiot/)
 
 For the common Arduino and KiwisIoT setup, see the:
 
