@@ -2,7 +2,7 @@
 
 Monitor **temperature and humidity in real time** using a **DHT11 sensor, ESP8266 NodeMCU, and KiwisIoT**.
 
-In this project, the ESP8266 reads temperature and humidity data from the DHT11 sensor and sends both values to the **KiwisIoT IoT dashboard** over Wi-Fi.
+In this **ESP8266 DHT11 IoT project**, the ESP8266 reads temperature and humidity data from the DHT11 sensor and sends both values to the **KiwisIoT IoT dashboard** over Wi-Fi.
 
 The dashboard provides a simple way to monitor environmental conditions remotely.
 
@@ -57,7 +57,7 @@ IoT Dashboard
 
 Temperature and humidity are two of the most commonly measured environmental parameters in IoT systems.
 
-This project demonstrates how a simple DHT11 sensor can be connected to an ESP8266 and integrated with an IoT platform for remote monitoring.
+This project demonstrates how a DHT11 sensor can be connected to an ESP8266 for temperature and humidity monitoring and integrated with an IoT platform for remote monitoring.
 
 Instead of viewing the sensor readings only through the Serial Monitor, the ESP8266 sends the data to KiwisIoT, where the values can be displayed on a dashboard.
 
@@ -367,7 +367,7 @@ The ESP8266 sends the data approximately every two seconds.
 
 The complete Arduino code is available here:
 
-View the Arduino Code
+[View the Arduino Code](code/esp8266-dht11-kiwisiot.ino)
 
 The program uses the ESP8266 Wi-Fi library, KiwisIoT Arduino library, and DHT library:
 
@@ -634,15 +634,14 @@ Read Temperature + Humidity
       ↓
 ESP8266 NodeMCU
       ↓
-      ├── Channel 0 → Temperature
-      │
-      └── Channel 1 → Humidity
-                ↓
-             Wi-Fi
-                ↓
-             KiwisIoT
-                ↓
-           IoT Dashboard
+Temperature → Channel 0
+Humidity    → Channel 1
+      ↓
+    Wi-Fi
+      ↓
+  KiwisIoT
+      ↓
+IoT Dashboard
 ```
 
 ---
