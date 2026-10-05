@@ -1,10 +1,10 @@
 # ESP8266 DHT11 IoT Project: Monitor Temperature and Humidity with KiwisIoT 🌡️
 
-Monitor **temperature and humidity in real time** using a **DHT11 sensor, ESP8266 NodeMCU, and KiwisIoT**.
+Build an **ESP8266 DHT11 IoT project** to monitor temperature and humidity in real time using a **DHT11 sensor, ESP8266 NodeMCU, Arduino, and KiwisIoT**.
 
-In this **ESP8266 DHT11 IoT project**, the ESP8266 reads temperature and humidity data from the DHT11 sensor and sends both values to the **KiwisIoT IoT dashboard** over Wi-Fi.
+In this project, the ESP8266 reads temperature and humidity from the DHT11 sensor and sends both values to a **KiwisIoT IoT dashboard** over Wi-Fi.
 
-The dashboard provides a simple way to monitor environmental conditions remotely.
+The dashboard displays the temperature and humidity readings through separate channels, providing a simple example of **real-time environmental monitoring with IoT**.
 
 ---
 
@@ -889,15 +889,22 @@ The project can also be extended by adding additional sensors, alerts, actuators
 
 ---
 
-## 🔗 Related KiwisIoT Projects
+## 🔗 Related KiwisIoT ESP8266 Projects
 
-This project is part of the **KiwisIoT ESP8266 project collection**.
+This project is part of the **KiwisIoT ESP8266 IoT project collection**.
 
-The common setup guide is available here:
+- [ESP8266 LDR Sensor IoT Project](../001-ldr-kiwisiot/)
+- [ESP8266 IR Sensor IoT Project](../002-ir-kiwisiot/)
+- [ESP8266 Ultrasonic Sensor IoT Project](../003-ultrasonic-kiwisiot/)
+- [ESP8266 PIR Motion Sensor IoT Project](../005-pir-kiwisiot/)
+- [ESP8266 Gas Sensor IoT Project](../006-gas-kiwisiot/)
+- [ESP8266 Flame Sensor IoT Project](../007-flame-kiwisiot/)
+- [ESP8266 Soil Moisture IoT Project](../008-soil-moisture-kiwisiot/)
 
-[Open the KiwisIoT Arduino Setup Guide](../kiwisiot-arduino-setup/)
+For the common Arduino and KiwisIoT setup, see the:
 
-Other ESP8266 IoT projects can be found in the parent directory.
+[**KiwisIoT Arduino Setup Guide**](../kiwisiot-arduino-setup/)
+
 ---
 
 ## ❓ Frequently Asked Questions
