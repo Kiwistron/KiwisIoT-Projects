@@ -332,7 +332,7 @@ The Gauge widget provides a visual representation of the sensor reading.
 
 The complete Arduino code is available here:
 
-View the Arduino Code
+[View the Arduino Code](code/esp8266-gas-kiwisiot.ino)
 
 The program uses the ESP8266 Wi-Fi library and the KiwisIoT Arduino library:
 
@@ -771,15 +771,21 @@ The project can be extended by adding LEDs, buzzers, relays, alerts, additional 
 
 ---
 
-## 🔗 Related KiwisIoT Projects
+## 🔗 Related KiwisIoT ESP8266 Projects
 
-This project is part of the **KiwisIoT ESP8266 project collection**.
+This project is part of the **KiwisIoT ESP8266 IoT project collection**.
 
-The common setup guide is available here:
+- [ESP8266 LDR Sensor IoT Project](../001-ldr-kiwisiot/)
+- [ESP8266 IR Sensor IoT Project](../002-ir-kiwisiot/)
+- [ESP8266 Ultrasonic Sensor IoT Project](../003-ultrasonic-kiwisiot/)
+- [ESP8266 DHT11 Temperature & Humidity IoT Project](../004-dht11-kiwisiot/)
+- [ESP8266 PIR Motion Sensor IoT Project](../005-pir-sensor-kiwisiot/)
+- [ESP8266 Flame Sensor IoT Project](../007-flame-kiwisiot/)
+- [ESP8266 Soil Moisture IoT Project](../008-soil-moisture-kiwisiot/)
 
-[Open the KiwisIoT Arduino Setup Guide](../kiwisiot-arduino-setup/)
+For the common Arduino and KiwisIoT setup, see the:
 
-Other ESP8266 IoT projects can be found in the parent directory.
+[**KiwisIoT Arduino Setup Guide**](../kiwisiot-arduino-setup/)
 
 ---
 
