@@ -779,7 +779,7 @@ This project is part of the **KiwisIoT ESP8266 IoT project collection**.
 - [ESP8266 IR Sensor IoT Project](../002-ir-kiwisiot/)
 - [ESP8266 Ultrasonic Sensor IoT Project](../003-ultrasonic-kiwisiot/)
 - [ESP8266 DHT11 Temperature & Humidity IoT Project](../004-dht11-kiwisiot/)
-- [ESP8266 PIR Motion Sensor IoT Project](../005-pir-sensor-kiwisiot/)
+- [ESP8266 PIR Motion Sensor IoT Project](../005-pir-kiwisiot/)
 - [ESP8266 Flame Sensor IoT Project](../007-flame-kiwisiot/)
 - [ESP8266 Soil Moisture IoT Project](../008-soil-moisture-kiwisiot/)
 
