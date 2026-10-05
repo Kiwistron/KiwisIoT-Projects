@@ -1,23 +1,23 @@
 # ESP8266 LDR Sensor IoT Project with KiwisIoT 💡
 
-Monitor **light intensity in real time** using an **LDR sensor, ESP8266 NodeMCU, and KiwisIoT**.
+Build an **ESP8266 LDR sensor IoT project** to monitor light intensity in real time using an **LDR sensor, ESP8266 NodeMCU, Arduino, and KiwisIoT**.
 
-In this project, the ESP8266 reads the analog output from an LDR sensor module, processes the reading into a light-level value, classifies the lighting condition as **BRIGHT, MEDIUM, or DARK**, and sends the data to the **KiwisIoT IoT dashboard** over Wi-Fi.
+In this project, the ESP8266 reads the analog output from the LDR sensor, converts the reading into a **light level**, classifies the condition as **BRIGHT, MEDIUM, or DARK**, and sends the data to a KiwisIoT IoT dashboard over Wi-Fi.
 
-The dashboard displays both the numerical **light level** and the current **light status**.
+The dashboard displays both the **light level** and **light status**, providing a simple example of real-time IoT sensor monitoring.
 
 ---
 
 ## 🚀 Project Highlights
 
-* ESP8266-based light intensity monitoring
-* LDR analog sensor reading
-* Real-time light-level visualization
-* BRIGHT, MEDIUM, and DARK status classification
-* KiwisIoT dashboard integration
-* Wi-Fi-based IoT monitoring
-* Beginner-friendly Arduino IoT project
-* Suitable for engineering and college IoT projects
+- ESP8266-based light intensity monitoring
+- LDR analog sensor reading
+- Real-time light-level visualization
+- BRIGHT, MEDIUM, and DARK status classification
+- KiwisIoT IoT dashboard integration
+- Wi-Fi-based sensor monitoring
+- Arduino IoT project for beginners
+- Suitable for student and engineering IoT projects
 
 ---
 
@@ -816,15 +816,20 @@ The project can also be extended by adding actuators or automation logic based o
 
 ---
 
-## 🔗 Related KiwisIoT Projects
+## 🔗 Related KiwisIoT ESP8266 Projects
 
-This project is part of the **KiwisIoT ESP8266 project collection**.
+This project is part of the KiwisIoT ESP8266 IoT project collection.
 
-The common setup guide is available here:
+- [ESP8266 IR Sensor IoT Project](../002-ir-kiwisiot/)
+- [ESP8266 Ultrasonic Sensor IoT Project](../003-ultrasonic-kiwisiot/)
+- [ESP8266 DHT11 Temperature & Humidity IoT Project](../004-dht11-kiwisiot/)
+- [ESP8266 PIR Motion Sensor IoT Project](../005-pir-kiwisiot/)
+- [ESP8266 Gas Sensor IoT Project](../006-gas-kiwisiot/)
+- [ESP8266 Flame Sensor IoT Project](../007-flame-kiwisiot/)
+- [ESP8266 Soil Moisture IoT Project](../008-soil-moisture-kiwisiot/)
 
-[Open the KiwisIoT Arduino Setup Guide](../kiwisiot-arduino-setup/)
-
-Other ESP8266 projects can be found in the parent directory.
+For Arduino and KiwisIoT setup, see the
+[KiwisIoT Arduino Setup Guide](../kiwisiot-arduino-setup/).
 
 ---
 
