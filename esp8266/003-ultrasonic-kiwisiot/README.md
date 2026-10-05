@@ -1,23 +1,23 @@
 # ESP8266 Ultrasonic Sensor IoT Project: Monitor Distance with KiwisIoT 📏
 
-Monitor **distance in real time** using an **ultrasonic sensor, ESP8266 NodeMCU, and KiwisIoT**.
+Build an **ESP8266 ultrasonic sensor IoT project** to monitor distance in real time using an **ultrasonic sensor, ESP8266 NodeMCU, Arduino, and KiwisIoT**.
 
-In this project, the ESP8266 measures the distance to an object using an ultrasonic sensor, calculates the distance in centimeters, and sends the measurement to the **KiwisIoT IoT dashboard** over Wi-Fi.
+In this project, the ESP8266 measures the distance to an object using an ultrasonic sensor, calculates the distance in **centimeters**, and sends the measurement to a **KiwisIoT IoT dashboard** over Wi-Fi.
 
-The dashboard displays the measured distance with the unit **cm**, making it easy to monitor object distance remotely.
+The dashboard displays the measured distance with the unit **cm**, providing a simple example of real-time IoT distance monitoring.
 
 ---
 
 ## 🚀 Project Highlights
 
-* ESP8266-based distance monitoring
-* Ultrasonic distance measurement
-* Real-time distance visualization
-* Distance measurement in centimeters
-* KiwisIoT dashboard integration
-* Wi-Fi-based IoT monitoring
-* Beginner-friendly Arduino IoT project
-* Suitable for engineering and college IoT projects
+- ESP8266-based distance monitoring
+- Ultrasonic sensor distance measurement
+- Real-time distance visualization
+- Distance measurement in centimeters
+- KiwisIoT IoT dashboard integration
+- Wi-Fi-based IoT monitoring
+- Arduino-based IoT project
+- Suitable for student and engineering IoT projects
 
 ---
 
@@ -810,15 +810,21 @@ The project can also be extended by adding additional sensors, alerts, actuators
 
 ---
 
-## 🔗 Related KiwisIoT Projects
+## 🔗 Related KiwisIoT ESP8266 Projects
 
-This project is part of the **KiwisIoT ESP8266 project collection**.
+This project is part of the **KiwisIoT ESP8266 IoT project collection**.
 
-The common setup guide is available here:
+- [ESP8266 LDR Sensor IoT Project](../001-ldr-kiwisiot/)
+- [ESP8266 IR Sensor IoT Project](../002-ir-kiwisiot/)
+- [ESP8266 DHT11 Temperature & Humidity IoT Project](../004-dht11-kiwisiot/)
+- [ESP8266 PIR Motion Sensor IoT Project](../005-pir-kiwisiot/)
+- [ESP8266 Gas Sensor IoT Project](../006-gas-kiwisiot/)
+- [ESP8266 Flame Sensor IoT Project](../007-flame-kiwisiot/)
+- [ESP8266 Soil Moisture IoT Project](../008-soil-moisture-kiwisiot/)
 
-[Open the KiwisIoT Arduino Setup Guide](../kiwisiot-arduino-setup/)
+For the common Arduino and KiwisIoT setup, see the:
 
-Other ESP8266 IoT projects can be found in the parent directory.
+[**KiwisIoT Arduino Setup Guide**](../kiwisiot-arduino-setup/)
 
 ---
 
