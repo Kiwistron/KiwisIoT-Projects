@@ -1,23 +1,23 @@
 # ESP8266 IR Sensor IoT Project with KiwisIoT 📡
 
-Detect objects in real time using an **IR sensor, ESP8266 NodeMCU, and KiwisIoT**.
+Build an **ESP8266 IR sensor IoT project** to detect objects in real time using an **IR sensor, ESP8266 NodeMCU, Arduino, and KiwisIoT**.
 
-In this project, the ESP8266 reads the digital output of an IR sensor module, determines whether an object is **DETECTED** or **NOT DETECTED**, and sends the object status to the **KiwisIoT IoT dashboard** over Wi-Fi.
+In this project, the ESP8266 reads the digital output of an IR sensor module, determines whether an object is **DETECTED** or **NOT DETECTED**, and sends the detection status to a **KiwisIoT IoT dashboard** over Wi-Fi.
 
-The dashboard provides a simple way to monitor object detection remotely.
+The project demonstrates how a simple IR sensor can be connected to an ESP8266 and used for remote object monitoring through an IoT dashboard.
 
 ---
 
 ## 🚀 Project Highlights
 
-* ESP8266-based object detection
-* IR sensor digital input
-* Real-time object detection status
-* DETECTED and NOT DETECTED classification
-* KiwisIoT dashboard integration
-* Wi-Fi-based IoT monitoring
-* Beginner-friendly Arduino IoT project
-* Suitable for engineering and college IoT projects
+- ESP8266-based object detection
+- IR sensor digital input
+- Real-time object detection
+- DETECTED and NOT DETECTED status
+- KiwisIoT IoT dashboard integration
+- Wi-Fi-based IoT monitoring
+- Arduino-based IoT project
+- Suitable for student and engineering IoT projects
 
 ---
 
