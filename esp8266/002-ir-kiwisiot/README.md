@@ -775,15 +775,21 @@ The project can also be extended by adding counters, actuators, alerts, addition
 
 ---
 
-## 🔗 Related KiwisIoT Projects
+## 🔗 Related KiwisIoT ESP8266 Projects
 
-This project is part of the **KiwisIoT ESP8266 project collection**.
+This project is part of the **KiwisIoT ESP8266 IoT project collection**.
 
-The common setup guide is available here:
+- [ESP8266 LDR Sensor IoT Project](../001-ldr-kiwisiot/)
+- [ESP8266 Ultrasonic Sensor IoT Project](../003-ultrasonic-kiwisiot/)
+- [ESP8266 DHT11 Temperature & Humidity IoT Project](../004-dht11-kiwisiot/)
+- [ESP8266 PIR Motion Sensor IoT Project](../005-pir-kiwisiot/)
+- [ESP8266 Gas Sensor IoT Project](../006-gas-kiwisiot/)
+- [ESP8266 Flame Sensor IoT Project](../007-flame-kiwisiot/)
+- [ESP8266 Soil Moisture IoT Project](../008-soil-moisture-kiwisiot/)
 
-[Open the KiwisIoT Arduino Setup Guide](../kiwisiot-arduino-setup/)
+For the common Arduino and KiwisIoT setup, see the:
 
-Other ESP8266 IoT projects can be found in the parent directory.
+[**KiwisIoT Arduino Setup Guide**](../kiwisiot-arduino-setup/)
 
 ---
 
