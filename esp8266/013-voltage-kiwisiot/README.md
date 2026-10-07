@@ -819,8 +819,6 @@ The project can also be extended with additional sensors, alerts, data logging, 
 013-voltage-kiwisiot/
 │
 ├── README.md
-├── LICENSE
-├── .gitignore
 │
 ├── code/
 │   └── esp8266-voltage-kiwisiot.ino
@@ -846,10 +844,10 @@ This project is part of the KiwisIoT ESP8266 IoT project collection.
 * [ESP8266 Gas Sensor IoT Project](../006-gas-kiwisiot/)
 * [ESP8266 Flame Sensor IoT Project](../007-flame-kiwisiot/)
 * [ESP8266 Soil Moisture IoT Project](../008-soil-moisture-kiwisiot/)
-* ESP8266 Raindrop Sensor IoT Project
-* ESP8266 Water Level Sensor IoT Project
-* ESP8266 Sound Sensor IoT Project
-* ESP8266 MPU6050 Motion & Acceleration IoT Project
+* [ESP8266 Water Level Sensor IoT Project](../009-water-level-kiwisiot/)
+* [ESP8266 Raindrop Sensor IoT Project](../010-rain-sensor-kiwisiot/)
+* [ESP8266 Sound Sensor IoT Project](../011-sound-kiwisiot/)
+* [ESP8266 MPU6050 Motion & Acceleration IoT Project](../012-mpu6050-kiwisiot/) 
 
 For Arduino and KiwisIoT setup, see the [KiwisIoT Arduino Setup Guide](../kiwisiot-arduino-setup/).
 
