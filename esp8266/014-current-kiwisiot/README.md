@@ -168,7 +168,7 @@ The current-carrying conductor is passed through the ACS712 sensor terminals acc
 
 This project uses the **analog output** of the ACS712 because the objective is to measure the current flowing through the sensor.
 
-[ACS712 Circuit](images/circuit.png)
+![ACS712 Circuit](images/circuit.png)
 
 > **Safety:** Current measurement involves electrical connections. Use an appropriate low-voltage setup for testing and follow the specifications and safety instructions for the ACS712 module and the circuit being measured.
 
@@ -385,7 +385,7 @@ ESP8266
                   KiwisIoT Widget
 ```
 
-[KiwisIoT Dashboard Output](images/dashboard-output.png)
+![KiwisIoT Dashboard Output](images/dashboard-output.png)
 
 ---
 
@@ -458,7 +458,7 @@ The program uses the ESP8266 Wi-Fi library and the KiwisIoT Arduino library:
 #include <KiwisIoT.h>
 ```
 
-[Arduino Code](images/code.png)
+![Arduino Code](images/code.png)
 
 ---
 
@@ -723,7 +723,7 @@ Sent to KiwisIoT Channel 1: ... W
 
 The project sends updated current and power information approximately every two seconds.
 
-[Serial Monitor Output](images/serial-monitor.png)
+![Serial Monitor Output](images/serial-monitor.png)
 
 ---
 
