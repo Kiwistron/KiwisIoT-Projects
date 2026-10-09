@@ -1,149 +1,190 @@
-# Hall Effect ESP8266 Hall Effect Sensor IoT Project: Monitor Magnetic Events with KiwisIoT 🧲
+# ESP8266 Hall Effect Sensor IoT Project: Monitor Magnetic Events with KiwisIoT 🧲
 
-Build an **ESP8266 Hall Effect sensor IoT project** to detect magnetic events using a **digital Hall Effect sensor module, ESP8266 NodeMCU, Arduino IDE, and KiwisIoT**.
+Build an **ESP8266 Hall Effect sensor IoT project** to detect magnetic events using a **digital Hall Effect sensor module, ESP8266 NodeMCU, Arduino, and KiwisIoT**.
 
-In this project, the ESP8266 reads the digital output from the Hall Effect sensor, identifies whether a magnetic event is detected, and sends the status to a KiwisIoT dashboard over Wi-Fi.
+In this project, the ESP8266 reads the digital output from the Hall Effect sensor module, determines whether a magnetic event is detected, and sends the status to a KiwisIoT IoT dashboard over Wi-Fi.
 
-The dashboard displays the **magnetic event status** as `DETECTED` or `NOT DETECTED`, providing a simple example of digital sensor monitoring with IoT.
+The dashboard displays the magnetic status as **DETECTED or NOT DETECTED**, providing a simple example of digital magnetic sensing and IoT-based event monitoring.
+
+---
 
 ## 🚀 Project Highlights
 
-* Detect magnetic events using a digital Hall Effect sensor module
-* Monitor sensor output using ESP8266 NodeMCU
-* Read digital signals through GPIO pin D5
-* Display magnetic event status as `DETECTED` or `NOT DETECTED`
-* Send sensor status to KiwisIoT using Wi-Fi
-* Visualize live status through a KiwisIoT dashboard widget
-* Monitor sensor readings through the Arduino Serial Monitor
-* Update the dashboard approximately every 2 seconds
-* Suitable for learning digital sensing, magnetic detection, and IoT communication
+* ESP8266-based magnetic event monitoring
+* Digital Hall Effect sensor module
+* Digital signal reading using `digitalRead()`
+* Magnetic status detection using HIGH and LOW signals
+* `DETECTED` and `NOT DETECTED` status messages
+* KiwisIoT IoT dashboard integration
+* Wi-Fi-based remote monitoring
+* Serial Monitor output for sensor testing
+* Automatic status updates approximately every 2 seconds
+* Suitable for electronics, embedded systems, and student IoT projects
+
+---
 
 ## 🔎 Project Overview
 
-The Hall Effect sensor detects a magnetic field and provides a digital output. The ESP8266 reads this output and determines the magnetic event status based on the configured logic.
+A **Hall Effect sensor** detects a magnetic field and converts it into an electrical signal. Digital Hall Effect sensor modules provide a HIGH or LOW output depending on the detected magnetic field and the module's configuration.
 
-When the sensor output is `LOW`, the program reports `DETECTED`. When the output is `HIGH`, it reports `NOT DETECTED`.
+In this project, a digital Hall Effect sensor module is connected to the **D5 pin** of the ESP8266 NodeMCU.
 
-The status is then sent to KiwisIoT through Channel 0 and displayed on the dashboard.
+The ESP8266 reads the digital output using `digitalRead()` and interprets the result as a magnetic event status.
 
-| Parameter         | Description                       |
-| ----------------- | --------------------------------- |
-| Project ID        | KIWISIOT-017                      |
-| Microcontroller   | ESP8266 NodeMCU                   |
-| Sensor            | Digital Hall Effect sensor module |
-| Sensor interface  | Digital output                    |
-| Sensor signal pin | D5                                |
-| Communication     | Wi-Fi                             |
-| IoT platform      | KiwisIoT                          |
-| Dashboard channel | Channel 0                         |
-| Serial baud rate  | 115200                            |
-| Update interval   | Approximately 2 seconds           |
-| Output            | DETECTED / NOT DETECTED           |
+The code uses the following logic:
+
+* `LOW` → `DETECTED`
+* `HIGH` → `NOT DETECTED`
+
+The resulting status is sent to **KiwisIoT Channel 0** and displayed on the dashboard.
+
+The project flow is:
+
+```text
+Digital Hall Effect Sensor
+            ↓
+      ESP8266 NodeMCU
+            ↓
+       Digital Reading
+            ↓
+    Magnetic Event Status
+            ↓
+           Wi-Fi
+            ↓
+         KiwisIoT
+            ↓
+      IoT Dashboard
+```
+
+---
 
 ## 💡 Why This Project?
 
-Magnetic sensing is useful when a system needs to detect the presence or movement of a magnet without physical contact.
+Magnetic sensing is useful in applications where a system needs to detect the presence or movement of a magnet.
 
-Combining a Hall Effect sensor with ESP8266 and KiwisIoT demonstrates how a simple digital sensor can be connected to an IoT dashboard for remote status monitoring.
+By connecting a digital Hall Effect sensor to an ESP8266, the detected status can be transmitted to an IoT dashboard instead of being monitored only locally.
 
-This project is useful for understanding:
+This project demonstrates how a digital sensor can be integrated with an IoT platform for remote status monitoring.
 
-* Digital sensor interfacing with ESP8266
-* Magnetic event detection
-* GPIO input reading
-* Wi-Fi-based IoT communication
-* Dashboard-based status visualization
+It provides a foundation for applications such as:
+
+* Magnetic field presence detection
+* Magnet position detection
+* Contactless event monitoring
+* Rotational or movement detection with suitable sensor arrangements
+* Embedded systems projects
+* IoT-based magnetic monitoring
+
+---
 
 ## 📚 What You'll Learn
 
-* How a digital Hall Effect sensor works
-* How to connect a Hall Effect sensor module to ESP8266
-* How to read digital sensor output using `digitalRead()`
-* How to interpret `HIGH` and `LOW` signals
-* How to convert sensor readings into readable status messages
-* How to send sensor data to KiwisIoT
-* How to configure a dashboard widget to display text status
-* How to monitor sensor activity using the Serial Monitor
+By building this project, you will learn how to:
+
+* Connect a digital Hall Effect sensor module to an ESP8266
+* Read digital sensor output using `digitalRead()`
+* Interpret HIGH and LOW digital signals
+* Convert a sensor reading into a magnetic event status
+* Send text-based sensor data to KiwisIoT
+* Configure a KiwisIoT dashboard widget
+* Monitor magnetic events over Wi-Fi
+* Test the sensor using the Arduino Serial Monitor
+
+---
 
 ## 🧰 Components Required
 
-| Component                         |    Quantity | Purpose                                                 |
-| --------------------------------- | ----------: | ------------------------------------------------------- |
-| ESP8266 NodeMCU                   |           1 | Reads sensor output and sends data to the IoT dashboard |
-| Digital Hall Effect sensor module |           1 | Detects magnetic fields                                 |
-| Jumper wires                      | As required | Connect the sensor to the ESP8266                       |
-| USB cable                         |           1 | Powers and programs the ESP8266                         |
-| Magnet                            |           1 | Produces the magnetic field used to test the sensor     |
+| Component                         |    Quantity |
+| --------------------------------- | ----------: |
+| ESP8266 NodeMCU                   |           1 |
+| Digital Hall Effect Sensor Module |           1 |
+| Jumper Wires                      | As required |
+| USB Cable                         |           1 |
+| Computer                          |           1 |
+| Magnet                            |           1 |
 
-**Note:** The sensor module shown in the circuit is a digital-output Hall Effect module. Its detection behavior depends on the specific sensor and module configuration.
+---
 
 ## 💻 Software Requirements
 
-* **Arduino IDE** — to write and upload the program
-* **ESP8266 board package** — to compile code for the NodeMCU
-* **KiwisIoT Arduino library** — to communicate with the KiwisIoT platform
-* **KiwisIoT account and dashboard** — to receive and display sensor status
-* **Wi-Fi connection** — to connect the ESP8266 to KiwisIoT
+* Arduino IDE
+* ESP8266 board package
+* KiwisIoT Arduino library
+* KiwisIoT account
+* Wi-Fi connection
 
 ### Common KiwisIoT Setup
 
-If you are new to connecting ESP8266 projects to KiwisIoT, follow the common setup guide first.
+Before starting this project, complete the common **KiwisIoT Arduino Setup Guide**.
+
+The setup guide covers:
+
+* Arduino IDE installation
+* ESP8266 board installation and selection
+* KiwisIoT Arduino library installation
+* KiwisIoT panel setup
+* Topic ID configuration
+* Dashboard widget setup and configuration
+
+The common setup guide is available in the parent `esp8266` directory:
 
 [Open the KiwisIoT Arduino Setup Guide](../kiwisiot-arduino-setup/)
 
-The guide covers the common Arduino and KiwisIoT setup required by these ESP8266 projects.
+---
 
 ## 🛠️ Technologies Used
 
-* **ESP8266 NodeMCU:** Reads the digital sensor signal and connects to Wi-Fi.
-* **Hall Effect sensor:** Detects magnetic fields and provides a digital output.
-* **Arduino IDE:** Used to write and upload the program.
-* **KiwisIoT:** Receives sensor status and displays it on the dashboard.
-* **Wi-Fi:** Enables communication between the ESP8266 and KiwisIoT.
+* ESP8266 NodeMCU
+* Digital Hall Effect Sensor Module
+* Arduino IDE
+* KiwisIoT Arduino Library
+* KiwisIoT IoT Dashboard
+* Wi-Fi
+* C++ / Arduino
+
+---
 
 ## 🔌 Circuit Connection
 
-Connect the digital Hall Effect sensor module to the ESP8266 NodeMCU according to the circuit diagram.
+Connect the digital Hall Effect sensor module to the ESP8266 NodeMCU as shown in the circuit diagram.
 
-| Hall Effect Sensor Module | ESP8266 NodeMCU              |
-| ------------------------- | ---------------------------- |
-| VCC                       | VIN, as shown in the circuit |
-| GND                       | GND                          |
-| DO                        | D5                           |
-| AO                        | Not connected                |
+| Hall Effect Sensor Module | ESP8266 NodeMCU |
+| ------------------------- | --------------- |
+| VCC                       | 3.3V            |
+| GND                       | GND             |
+| DO / Digital Output       | D5              |
 
-The program uses only the sensor's **digital output (DO)**. The analog output (AO), if present on your module, is not used in this project.
+The sensor module's digital output is connected to the ESP8266 D5 pin.
 
-**Important:** Verify the module's permitted supply voltage before connecting VCC. Do not assume every Hall Effect module has the same voltage requirements.
+The ESP8266 reads the signal from this pin to determine whether the sensor reports a magnetic event.
 
-### Circuit Diagram
+![Hall Effect Sensor Circuit Diagram](images/circuit.png)
 
-![ESP8266 Hall Effect sensor circuit diagram](images/circuit.png)
+> **Note:** Follow the pin labels on your particular Hall Effect sensor module. The connections above match the supplied circuit. Confirm your module's operating-voltage requirements before powering it.
 
-The sensor's digital output connects to D5 on the ESP8266. The ESP8266 reads this signal and sends the resulting magnetic status to KiwisIoT.
+---
 
 ## 🔬 How the Hall Effect Sensor Works
 
-A Hall Effect sensor detects a magnetic field using the Hall effect. Depending on the sensor design and module configuration, its digital output changes state when the magnetic field reaches the module's switching threshold.
+The Hall Effect is a physical effect in which a magnetic field influences the electrical behavior of a conducting or semiconductor material.
 
-In this project, the ESP8266 reads the sensor's digital output and converts it into a status message.
+A Hall Effect sensor uses this principle to detect magnetic fields. A digital Hall Effect sensor module converts the sensor response into a digital output.
 
-| Digital Output | Program Status | Meaning                     |
-| -------------- | -------------- | --------------------------- |
-| `LOW`          | `DETECTED`     | Magnetic event detected     |
-| `HIGH`         | `NOT DETECTED` | Magnetic event not detected |
-
-These mappings follow the logic used in this project's Arduino code. Confirm the behavior of your particular module by testing it with a magnet.
-
-## 🧠 Understanding the Detection Logic
-
-The program uses the `digitalRead()` function to read the sensor output from pin D5.
+In this project, the ESP8266 reads the digital output using:
 
 ```cpp
 int sensorValue = digitalRead(HALL_SENSOR_PIN);
+```
 
-String magneticStatus;
+The sensor pin is defined as:
 
+```cpp
+#define HALL_SENSOR_PIN D5
+```
+
+The program interprets the reading as follows:
+
+```cpp
 if (sensorValue == LOW) {
   magneticStatus = "DETECTED";
 } else {
@@ -151,78 +192,142 @@ if (sensorValue == LOW) {
 }
 ```
 
-**How it works:**
+According to the logic used by this project:
 
-1. The ESP8266 reads the digital signal from D5.
-2. If the signal is `LOW`, the program sets the status to `DETECTED`.
-3. If the signal is `HIGH`, the program sets the status to `NOT DETECTED`.
-4. The status is printed in the Serial Monitor.
-5. The status is sent to KiwisIoT through Channel 0.
+| Digital Output | Magnetic Status |
+| -------------- | --------------- |
+| `LOW`          | `DETECTED`      |
+| `HIGH`         | `NOT DETECTED`  |
 
-This is digital status detection rather than an analog measurement of magnetic field strength.
+The exact response depends on the Hall Effect sensor module and its output circuitry. The table above describes the interpretation used by this project's code and observed output.
+
+---
+
+## 🧲 Magnetic Event Detection
+
+The ESP8266 converts the sensor's digital output into a readable magnetic status.
+
+### Magnetic Event Detected
+
+When the sensor output is `LOW`, the program assigns:
+
+```cpp
+magneticStatus = "DETECTED";
+```
+
+The Serial Monitor displays:
+
+```text
+Digital Output: LOW
+Magnetic Event: DETECTED
+```
+
+The ESP8266 sends `DETECTED` to KiwisIoT Channel 0.
+
+### Magnetic Event Not Detected
+
+When the sensor output is `HIGH`, the program assigns:
+
+```cpp
+magneticStatus = "NOT DETECTED";
+```
+
+The Serial Monitor displays:
+
+```text
+Digital Output: HIGH
+Magnetic Event: NOT DETECTED
+```
+
+The ESP8266 sends `NOT DETECTED` to KiwisIoT Channel 0.
+
+This approach reports the sensor's digital status. It does not measure magnetic field strength or the distance between the magnet and sensor.
+
+---
 
 ## ☁️ KiwisIoT Dashboard
 
-The KiwisIoT dashboard displays the magnetic event status received from the ESP8266.
+This project uses **one KiwisIoT channel** to display the magnetic event status.
 
-The project uses **one channel — Channel 0** — to send the status as text.
+| Channel | Data            | Possible Values            |
+| ------- | --------------- | -------------------------- |
+| `0`     | Magnetic Status | `DETECTED`, `NOT DETECTED` |
 
-### Dashboard Output
+The data flow is:
 
-![KiwisIoT Hall Effect sensor dashboard displaying magnetic status](images/dashboard-output.png)
+```text
+Hall Effect Sensor
+        ↓
+    ESP8266 D5
+        ↓
+ Magnetic Event Status
+        ↓
+ KiwisIoT Channel 0
+        ↓
+ Magnetic Status Widget
+```
 
-The dashboard widget displays the current status, such as `DETECTED`, when the sensor output is `LOW`.
+![KiwisIoT Hall Effect Dashboard](images/dashboard-output.png)
 
-When the sensor output becomes `HIGH`, the program sends `NOT DETECTED`.
+The dashboard widget displays the magnetic status received from the ESP8266. In the supplied screenshot, the widget displays `DETECTED`.
 
-### How Dashboard Data Is Sent
+---
 
-The following statement sends the magnetic status to KiwisIoT:
+## ⚙️ Dashboard Configuration
+
+Create a KiwisIoT panel and add a widget to display the magnetic status.
+
+### Magnetic Status Widget
+
+Configure the widget to receive data from Channel 0.
+
+Suggested configuration:
+
+```text
+Name: Magnetic Status
+Channel ID: 0
+```
+
+The ESP8266 sends the status using:
 
 ```cpp
 kiwisiot.send("0", magneticStatus);
 ```
 
-Here:
+The widget can display:
 
-* `"0"` is the KiwisIoT channel used by this project.
-* `magneticStatus` contains either `DETECTED` or `NOT DETECTED`.
+```text
+DETECTED
+```
 
-## ⚙️ Dashboard Configuration
+or:
 
-Configure your KiwisIoT dashboard to receive data from the same Topic ID used in the Arduino program.
+```text
+NOT DETECTED
+```
 
-| Setting         | Value                      |
-| --------------- | -------------------------- |
-| Dashboard name  | Hall Effect Monitoring     |
-| Widget title    | MAGNETIC STATUS            |
-| Data channel    | Channel 0                  |
-| Data type       | Text status                |
-| Possible values | `DETECTED`, `NOT DETECTED` |
+> **Note:** The channel configured in the dashboard must match the channel used in the Arduino code.
 
-### Configuration Steps
-
-1. Open your KiwisIoT dashboard.
-2. Create or open the Hall Effect Monitoring panel.
-3. Add a widget that can display text values.
-4. Configure the widget to read Channel 0.
-5. Set the widget title to `MAGNETIC STATUS`.
-6. Save the dashboard configuration.
-7. Use the same Topic ID in the Arduino code.
-
-The dashboard screenshot shows the status `DETECTED` when a magnetic event is detected.
+---
 
 ## 💻 Arduino Code
 
-The complete Arduino program for this project is available here:
+The complete Arduino program is available in the project `code` directory.
 
-[View the Arduino Code](code/esp8266-hall-effect-kiwisiot.ino)
+The program uses the ESP8266 Wi-Fi library and KiwisIoT Arduino library:
 
-The program reads the Hall Effect sensor's digital output, converts it to a status string, prints the result, and sends the status to KiwisIoT.
+```cpp
+#include <ESP8266WiFi.h>
+#include <KiwisIoT.h>
+```
+
+![Arduino Code](images/code.png)
+
+---
 
 ## 🔐 Configure Wi-Fi and KiwisIoT
 
-Before uploading the program, update the Wi-Fi credentials and dashboard Topic ID.
+Before uploading the program, update these values in the Arduino code:
 
 ```cpp
 const char* ssid = "YOUR_WIFI_NAME";
@@ -231,9 +336,17 @@ const char* pass = "YOUR_WIFI_PASSWORD";
 const char* topic = "YOUR_DASHBOARD_TOPIC_ID";
 ```
 
-Replace the placeholders with your actual Wi-Fi name, Wi-Fi password, and KiwisIoT dashboard Topic ID.
+Replace `YOUR_WIFI_NAME` with your Wi-Fi network name.
 
-Keep your real Wi-Fi credentials and Topic ID private when publishing your code publicly.
+Replace `YOUR_WIFI_PASSWORD` with your Wi-Fi password.
+
+Replace `YOUR_DASHBOARD_TOPIC_ID` with the Topic ID of your KiwisIoT panel.
+
+Make sure the Topic ID corresponds to the panel where you configured the magnetic status widget.
+
+> **Security:** Never publish your actual Wi-Fi password or private credentials in a public GitHub repository.
+
+---
 
 ## 📝 Complete Arduino Code
 
@@ -315,26 +428,33 @@ void loop() {
 }
 ```
 
+---
+
 ## ⬆️ Upload the Program
 
+Follow these steps to upload the program:
+
 1. Connect the ESP8266 NodeMCU to your computer using a USB cable.
-2. Open the project in Arduino IDE.
-3. Install the ESP8266 board package and KiwisIoT Arduino library if they are not already installed.
-4. Select the appropriate ESP8266 NodeMCU board and COM port.
-5. Enter your Wi-Fi credentials and KiwisIoT Topic ID.
-6. Click **Verify** to compile the program.
-7. Click **Upload** to upload it to the ESP8266.
-8. Open the Serial Monitor and select **115200 baud**.
-9. Bring a magnet near the sensor and observe the output.
-10. Open the KiwisIoT dashboard to confirm that the magnetic status updates.
+2. Open `esp8266-hall-effect-kiwisiot.ino` in Arduino IDE.
+3. Select the appropriate ESP8266 NodeMCU board.
+4. Verify the code.
+5. Upload the program.
+6. Open the Serial Monitor.
+7. Set the baud rate to `115200`.
+
+After startup, the ESP8266 initializes the sensor input and calls `kiwisiot.begin()`.
+
+The program then reads the sensor status and sends updates to KiwisIoT approximately every two seconds.
+
+---
 
 ## 🖥️ Serial Monitor Output
 
-The program prints the digital output, magnetic event status, and data sent to KiwisIoT.
+The Serial Monitor displays the digital output, interpreted magnetic status, and the value sent to KiwisIoT.
 
-![Arduino Serial Monitor showing Hall Effect sensor output](images/serial-monitor.png)
+### When a Magnetic Event Is Detected
 
-### Example Output
+The supplied Serial Monitor screenshot shows output in this format:
 
 ```text
 ---------- HALL EFFECT MONITORING ----------
@@ -342,7 +462,13 @@ Digital Output: LOW
 Magnetic Event: DETECTED
 [TX] {"0":"DETECTED"}
 Sent to KiwisIoT Channel 0: DETECTED
+```
 
+### When a Magnetic Event Is Not Detected
+
+The supplied Serial Monitor screenshot also shows:
+
+```text
 ---------- HALL EFFECT MONITORING ----------
 Digital Output: HIGH
 Magnetic Event: NOT DETECTED
@@ -350,72 +476,230 @@ Magnetic Event: NOT DETECTED
 Sent to KiwisIoT Channel 0: NOT DETECTED
 ```
 
-The example above illustrates the two status conditions. The actual Serial Monitor output may include additional library messages depending on the connection and library version.
+These examples follow the observed output in your supplied screenshot.
+
+![Serial Monitor Output](images/serial-monitor.png)
+
+---
 
 ## 🔄 Understanding the Data Flow
 
-The project follows this sequence:
+The project processes the Hall Effect sensor signal in several stages.
 
-1. A magnetic field reaches the Hall Effect sensor.
-2. The sensor changes its digital output according to its switching behavior.
-3. The ESP8266 reads the signal from D5.
-4. The program determines the magnetic status.
-5. The status is printed in the Serial Monitor.
-6. The ESP8266 sends the status to KiwisIoT through Channel 0.
-7. The dashboard displays `DETECTED` or `NOT DETECTED`.
+### 1. Read the Digital Input
 
-The program checks for new data approximately every 2 seconds.
+The ESP8266 reads the sensor output from D5:
+
+```cpp
+int sensorValue = digitalRead(HALL_SENSOR_PIN);
+```
+
+### 2. Determine the Magnetic Status
+
+The program interprets `LOW` as detected and `HIGH` as not detected:
+
+```cpp
+if (sensorValue == LOW) {
+  magneticStatus = "DETECTED";
+} else {
+  magneticStatus = "NOT DETECTED";
+}
+```
+
+### 3. Print the Status
+
+The magnetic status is displayed in the Serial Monitor:
+
+```cpp
+Serial.print("Magnetic Event: ");
+Serial.println(magneticStatus);
+```
+
+### 4. Send the Status to KiwisIoT
+
+The status is sent through Channel 0:
+
+```cpp
+kiwisiot.send("0", magneticStatus);
+```
+
+### 5. Display the Result
+
+KiwisIoT receives the status and displays it on the configured dashboard widget.
+
+The complete data flow is:
+
+```text
+Digital Hall Effect Sensor
+            ↓
+       Digital Output
+            ↓
+         ESP8266 D5
+            ↓
+   DETECTED / NOT DETECTED
+            ↓
+      KiwisIoT Channel 0
+            ↓
+         Dashboard
+```
+
+---
 
 ## 🧪 Testing the Project
 
-Use the following procedure to test the system:
+To test the project:
 
-1. Power the ESP8266 and Hall Effect sensor module.
-2. Confirm that the ESP8266 starts the KiwisIoT initialization sequence.
-3. Open the Serial Monitor at 115200 baud.
-4. Observe the initial sensor status.
+1. Connect the Hall Effect sensor module to the ESP8266.
+2. Upload the Arduino program.
+3. Open the Serial Monitor at `115200` baud.
+4. Confirm that the sensor initializes and KiwisIoT starts.
 5. Bring a suitable magnet near the sensor.
-6. Check whether the digital output changes.
-7. Verify that the program reports the appropriate magnetic status.
-8. Confirm that Channel 0 updates on the KiwisIoT dashboard.
-9. Move the magnet away and observe whether the status returns to `NOT DETECTED`.
+6. Move the magnet away from the sensor.
+7. Observe the digital output and magnetic status in the Serial Monitor.
+8. Verify that the KiwisIoT dashboard displays the status sent by the ESP8266.
 
-**Note:** The detection distance and switching behavior depend on the sensor type, magnet strength, polarity, orientation, and module design.
+### Test 1: Magnetic Event Detected
+
+Expected output according to the project's code:
+
+```text
+Digital Output: LOW
+Magnetic Event: DETECTED
+```
+
+### Test 2: Magnetic Event Not Detected
+
+Expected output according to the project's code:
+
+```text
+Digital Output: HIGH
+Magnetic Event: NOT DETECTED
+```
+
+The dashboard should reflect the status sent by the ESP8266.
+
+> **Note:** The response depends on the type and orientation of the magnet, the sensor's sensitivity, and the particular module. Test your module to confirm the detection behavior.
+
+---
+
+## ❓ Why Use a Digital Hall Effect Sensor?
+
+A digital Hall Effect sensor provides a simple HIGH or LOW signal based on its magnetic detection behavior.
+
+Unlike an analog magnetic sensor, this project does not calculate a magnetic field strength value. It converts the digital signal into a readable status and sends that status to KiwisIoT.
+
+The project uses one channel because it sends one magnetic status:
+
+```text
+Channel 0 → DETECTED / NOT DETECTED
+```
+
+This keeps the dashboard configuration simple and makes the project suitable for learning digital inputs and IoT data transmission.
+
+---
 
 ## 🛠️ Troubleshooting
 
-| Problem                              | Possible Cause                                             | Solution                                                                   |
-| ------------------------------------ | ---------------------------------------------------------- | -------------------------------------------------------------------------- |
-| Sensor always shows `DETECTED`       | The sensor output remains LOW                              | Check the sensor orientation, magnet position, wiring, and module behavior |
-| Sensor always shows `NOT DETECTED`   | The sensor output remains HIGH                             | Test with a suitable magnet and verify the connections                     |
-| Status changes unexpectedly          | Magnet movement, electrical noise, or sensor sensitivity   | Secure the wiring and test at different magnet positions                   |
-| Dashboard does not update            | Incorrect Topic ID or channel configuration                | Check the Topic ID and confirm that the widget reads Channel 0             |
-| ESP8266 does not connect to KiwisIoT | Incorrect Wi-Fi credentials or network issue               | Verify the credentials and Wi-Fi availability                              |
-| Program fails to compile             | Missing board package or library                           | Install the ESP8266 board package and KiwisIoT Arduino library             |
-| Sensor output is unstable            | Incorrect supply, loose wires, or module-specific behavior | Verify the supply voltage and wiring against the module documentation      |
+### Magnetic Status Does Not Change
+
+Check:
+
+* VCC, GND, and digital output connections
+* The connection between the sensor output and D5
+* The position and orientation of the magnet
+* The sensor module's sensitivity or adjustment, if available
+* The sensor's digital output
+* Loose jumper wires
+
+### Magnetic Status Is Reversed
+
+If the Serial Monitor displays `DETECTED` when you expect `NOT DETECTED`, check the actual output of your sensor module.
+
+The current code uses:
+
+```cpp
+if (sensorValue == LOW) {
+  magneticStatus = "DETECTED";
+} else {
+  magneticStatus = "NOT DETECTED";
+}
+```
+
+If your module has opposite output behavior, adjust the interpretation to match your module's readings.
+
+### Dashboard Does Not Receive Data
+
+Check:
+
+* Wi-Fi name and password
+* Internet connection
+* KiwisIoT Topic ID
+* KiwisIoT Arduino library
+* Dashboard widget configuration
+* Channel ID
+
+### Dashboard Shows No Magnetic Status
+
+Confirm that the widget is configured for Channel 0.
+
+The code sends the status using:
+
+```cpp
+kiwisiot.send("0", magneticStatus);
+```
+
+### Serial Monitor Shows Incorrect Characters
+
+Make sure the Serial Monitor baud rate is `115200`, matching:
+
+```cpp
+Serial.begin(115200);
+```
+
+---
 
 ## 🔒 Security
 
-Follow these practices when publishing or deploying the project:
+Never publish sensitive credentials in a public GitHub repository.
 
-* Do not publish actual Wi-Fi passwords in public repositories.
-* Replace example credentials with your own local settings before uploading.
-* Keep your KiwisIoT Topic ID private where appropriate.
-* Use a stable power supply and secure sensor connections.
-* Test the project before using it in a practical monitoring application.
+Do not commit:
+
+* Wi-Fi passwords
+* API keys
+* Access tokens
+* Account passwords
+* Private credentials
+
+Use placeholders in the public example:
+
+```text
+YOUR_WIFI_NAME
+YOUR_WIFI_PASSWORD
+YOUR_DASHBOARD_TOPIC_ID
+```
+
+Enter your actual credentials only in your local Arduino project.
+
+---
 
 ## 🌱 Possible Applications
 
-This project demonstrates magnetic event detection and can be adapted for applications such as:
+An ESP8266 Hall Effect sensor monitoring system can be used as a starting point for:
 
-* Detecting the presence of a magnet near a machine
-* Monitoring magnetic switching events
-* Demonstrating contactless sensing in educational projects
-* Learning digital sensor monitoring with ESP8266
-* Building prototypes for magnetic position or rotation detection
-* Integrating magnetic event status into a broader IoT monitoring system
+* Magnetic event detection
+* Magnet position sensing
+* Contactless detection systems
+* Rotational event detection with a suitable magnet arrangement
+* Equipment position monitoring
+* Embedded systems experiments
+* Home automation prototypes
+* Student and engineering IoT projects
 
-These are possible extensions. The current code reports only a digital magnetic status and does not measure magnetic field strength, rotation speed, or position.
+The project can be extended with additional sensors, event logging, notifications, or other KiwisIoT dashboard features.
+
+> **Note:** This project reports the digital status produced by the sensor module. It does not measure magnetic field strength, and it is not by itself a complete security or industrial monitoring system.
+
+---
 
 ## 📁 Project Structure
 
@@ -434,64 +718,103 @@ These are possible extensions. The current code reports only a digital magnetic 
     └── dashboard-output.png
 ```
 
-Keep the filenames in the `images/` directory consistent with the image references in this README.
+---
 
 ## 🔗 Related KiwisIoT ESP8266 Projects
 
-Explore the other ESP8266 sensor projects in this repository:
+This project is part of the KiwisIoT ESP8266 IoT project collection.
 
 * [ESP8266 LDR Sensor IoT Project](../001-ldr-kiwisiot/)
-* [ESP8266 Sound Sensor IoT Project](../011-sound-sensor-kiwisiot/)
-* [ESP8266 MPU6050 Motion Monitoring Project](../012-mpu6050-kiwisiot/)
-* [ESP8266 Voltage Sensor IoT Project](../013-voltage-sensor-kiwisiot/)
+* [ESP8266 IR Sensor IoT Project](../002-ir-kiwisiot/)
+* [ESP8266 Ultrasonic Sensor IoT Project](../003-ultrasonic-kiwisiot/)
+* [ESP8266 DHT11 Temperature and Humidity IoT Project](../004-dht11-kiwisiot/)
+* [ESP8266 PIR Motion Sensor IoT Project](../005-pir-kiwisiot/)
+* [ESP8266 Gas Sensor IoT Project](../006-gas-kiwisiot/)
+* [ESP8266 Flame Sensor IoT Project](../007-flame-kiwisiot/)
+* [ESP8266 Soil Moisture IoT Project](../008-soil-moisture-kiwisiot/)
+* [ESP8266 Water Level Sensor IoT Project](../009-water-level-kiwisiot/)
+* [ESP8266 Raindrop Sensor IoT Project](../010-raindrop-kiwisiot/)
+* [ESP8266 Sound Sensor IoT Project](../011-sound-kiwisiot/)
+* [ESP8266 MPU6050 Motion and Acceleration IoT Project](../012-mpu6050-kiwisiot/)
+* [ESP8266 Voltage Sensor IoT Project](../013-voltage-kiwisiot/)
 * [ESP8266 Current Sensor IoT Project](../014-current-kiwisiot/)
 * [ESP8266 Vibration Sensor IoT Project](../015-vibration-kiwisiot/)
 * [ESP8266 Reed Switch IoT Project](../016-reed-switch-kiwisiot/)
 
-Check the repository for additional ESP8266, sensor monitoring, and KiwisIoT projects.
+For Arduino and KiwisIoT setup, see the [KiwisIoT Arduino Setup Guide](../kiwisiot-arduino-setup/).
+
+---
 
 ## ❓ Frequently Asked Questions
 
-### 1. What is a Hall Effect sensor?
+### What is a Hall Effect sensor?
 
-A Hall Effect sensor detects the presence of a magnetic field and converts it into an electrical signal.
+A Hall Effect sensor detects a magnetic field and converts the response into an electrical signal. A digital module provides a HIGH or LOW output based on its detection behavior.
 
-### 2. Which ESP8266 pin is used in this project?
+### Which ESP8266 board is used?
 
-The digital output of the Hall Effect sensor is connected to **D5** on the ESP8266 NodeMCU.
+This project uses the ESP8266 NodeMCU development board.
 
-### 3. Which KiwisIoT channel is used?
+### Which sensor is used?
 
-This project uses **Channel 0** to send the magnetic status.
+The project uses a digital Hall Effect sensor module.
 
-### 4. What does `DETECTED` mean?
+### Which ESP8266 pin is connected to the sensor?
 
-In this program, `DETECTED` means that the digital sensor output is LOW.
+The digital output is connected to D5:
 
-### 5. What does `NOT DETECTED` mean?
+```cpp
+#define HALL_SENSOR_PIN D5
+```
 
-In this program, `NOT DETECTED` means that the digital sensor output is HIGH.
+### How does the project determine whether a magnetic event is detected?
 
-### 6. Does this project measure magnetic field strength?
+The code interprets the digital readings as follows:
 
-No. The current implementation reads the digital output and reports a status. It does not measure magnetic field strength.
+```text
+LOW  → DETECTED
+HIGH → NOT DETECTED
+```
 
-### 7. How often is the status sent to KiwisIoT?
+### Which KiwisIoT channel is used?
 
-The program sends the status approximately every **2 seconds**.
+The project uses Channel 0 to send the magnetic status.
 
-### 8. Can this project be used for rotation monitoring?
+### How often is the status sent?
 
-It can serve as a starting point for a rotation-detection prototype using a magnet and suitable Hall sensor. Measuring rotation speed would require additional pulse counting and timing logic, which are not included in this code.
+The program sends the status approximately every two seconds.
+
+### Does this project measure magnetic field strength?
+
+No. The project uses a digital sensor output to report `DETECTED` or `NOT DETECTED`. It does not measure magnetic field strength.
+
+### Can this project detect a rotating magnet?
+
+It can be adapted for rotational event detection when a suitable sensor and magnet arrangement are used. The current program reports the sensor's status at regular intervals; it does not count rotations.
+
+### Can the project be extended?
+
+Yes. Additional sensors, alerts, event logging, or other KiwisIoT dashboard features can be added.
+
+---
 
 ## 📌 Summary
 
-This **ESP8266 Hall Effect Sensor IoT Project with KiwisIoT** demonstrates how to detect magnetic events, read digital sensor output, and send status updates to an IoT dashboard.
+This project demonstrates an **ESP8266 Hall Effect sensor IoT system** using a digital Hall Effect sensor module and KiwisIoT.
 
-Using ESP8266 NodeMCU, a digital Hall Effect sensor module, Arduino IDE, and KiwisIoT, the project provides a practical introduction to contactless magnetic sensing and IoT-based status monitoring.
+The ESP8266 reads the sensor's digital output through D5, interprets the input as `DETECTED` or `NOT DETECTED`, and sends the status to KiwisIoT Channel 0 over Wi-Fi.
 
-The same approach can be extended to more advanced sensor projects that combine multiple inputs and dashboard-based monitoring.
+The final dashboard displays:
+
+```text
+DETECTED     → Magnetic event detected
+NOT DETECTED → Magnetic event not detected
+```
+
+This project provides a practical introduction to digital magnetic sensing, ESP8266 programming, and IoT-based status monitoring.
+
+---
 
 ## 📄 License
 
-This project is distributed under the license included in this repository. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the `LICENSE` file for details.
