@@ -61,8 +61,6 @@ The following projects demonstrate how to interface common sensors and modules w
 | 019 | [ESP8266 BMP180 Pressure and Temperature IoT Project](./019-bmp180-kiwisiot/) | Read atmospheric pressure and temperature using a BMP180 barometric sensor. |
 | 020 | [ESP8266 DS18B20 Temperature Monitoring IoT Project](./020-DS18B20-kiwisiot/) | Measure temperature using a DS18B20 digital temperature sensor. |
 
-**Note:** Project links use the expected folder names. Confirm each folder name in the repository and update any link that differs from the actual path.
-
 ## What You Will Learn
 
 By exploring these ESP8266 projects, you can learn how to:
