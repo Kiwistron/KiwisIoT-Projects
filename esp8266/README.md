@@ -1,97 +1,99 @@
-# KiwisIoT Projects – IoT, AIoT, ESP8266, ESP32 and Arduino
+# ESP8266 IoT Projects with KiwisIoT | Arduino, Sensors and Cloud Dashboard
 
-A collection of practical **IoT and AIoT projects using KiwisIoT, ESP8266, ESP32, Arduino, sensors, electronic modules, Wi-Fi, MQTT, and IoT dashboards**.
+Explore hands-on **ESP8266 IoT projects using KiwisIoT, Arduino IDE, NodeMCU, and electronic sensors**. This collection includes sensor-monitoring projects, wireless data visualization, automation experiments, and practical embedded systems examples.
 
-This repository brings together hands-on examples for learning embedded systems, sensor monitoring, device connectivity, and automation. Each project provides a starting point for exploring how microcontrollers and sensors can be used to build connected applications.
-
-Whether you are an engineering student, beginner, educator, maker, or developer, these projects can help you explore IoT concepts through practical hardware and software examples.
-
-## Project Directory
-
-Browse the available ESP8266 projects below. Each project links to its own folder, where you can find its documentation, source code, and other project resources.
-
-### ESP8266 IoT Projects
-
-| No. | Project | Main Application |
-|---|---|---|
-| 001 | [ESP8266 LDR Sensor Project](./esp8266/001-ldr-kiwisiot/) | Light intensity monitoring |
-| 002 | [ESP8266 IR Sensor Project](./esp8266/002-ir-kiwisiot/) | Infrared object detection |
-| 003 | [ESP8266 Ultrasonic Sensor Project](./esp8266/003-ultrasonic-kiwisiot/) | Distance measurement |
-| 004 | [ESP8266 DHT11 Project](./esp8266/004-dht11-kiwisiot/) | Temperature and humidity |
-| 005 | [ESP8266 PIR Motion Sensor Project](./esp8266/005-pir-kiwisiot/) | Motion detection |
-| 006 | [ESP8266 Gas Sensor Project](./esp8266/006-gas-kiwisiot/) | Gas sensor monitoring |
-| 007 | [ESP8266 Flame Sensor Project](./esp8266/007-flame-kiwisiot/) | Flame detection |
-| 008 | [ESP8266 Soil Moisture Project](./esp8266/008-soil-moisture-kiwisiot/) | Soil moisture monitoring |
-| 009 | [ESP8266 Water Level Project](./esp8266/009-water-level-kiwisiot/) | Water level monitoring |
-| 010 | [ESP8266 Rain Sensor Project](./esp8266/010-rain-sensor-kiwisiot/) | Rain detection |
-| 011 | [ESP8266 Sound Sensor Project](./esp8266/011-sound-kiwisiot/) | Sound activity monitoring |
-| 012 | [ESP8266 MPU6050 Project](./esp8266/012-mpu6050-kiwisiot/) | Motion and acceleration |
-| 013 | [ESP8266 Voltage Monitoring Project](./esp8266/013-voltage-kiwisiot/) | Voltage measurement |
-| 014 | [ESP8266 Current Monitoring Project](./esp8266/014-current-kiwisiot/) | Current measurement |
-| 015 | [ESP8266 Vibration Sensor Project](./esp8266/015-vibration-kiwisiot/) | Vibration detection |
-| 016 | [ESP8266 Reed Switch Project](./esp8266/016-reed-switch-kiwisiot/) | Magnetic switching |
-| 017 | [ESP8266 Hall Effect Sensor Project](./esp8266/017-hall-effect-kiwisiot/) | Magnetic field detection |
-| 018 | [ESP8266 Capacitive Touch Project](./esp8266/018-touch-kiwisiot/) | Touch detection |
-| 019 | [ESP8266 BMP180 Project](./esp8266/019-bmp180-kiwisiot/) | Atmospheric pressure and temperature |
-| 020 | [ESP8266 DS18B20 Project](./esp8266/020-DS18B20-kiwisiot/) | Digital temperature monitoring |
-
-**[Browse all ESP8266 projects and the detailed project index →](./esp8266/README.md)**
-
-### Getting Started
-
-New to KiwisIoT with ESP8266? Start with the [KiwisIoT Arduino Setup Guide](./esp8266/kiwisiot-arduino-setup/) to prepare the Arduino IDE and configure the KiwisIoT library.
-
-## Technologies and Tools
+Each project has its own folder with documentation and source code to help students, educators, electronics enthusiasts, and developers learn how to connect sensors to an ESP8266 and visualize sensor data on an IoT dashboard.
 
 - **IoT platform:** [KiwisIoT](https://kiwisiot.in/)
-- **Microcontrollers:** ESP8266, ESP32, and Arduino-compatible boards
+- **Repository:** [KiwisIoT Projects on GitHub](https://github.com/Kiwistron/KiwisIoT-Projects)
+- **Controller:** ESP8266 NodeMCU
 - **Development environment:** Arduino IDE
-- **Connectivity:** Wi-Fi and MQTT, where supported by the project
-- **Hardware:** Sensors, electronic modules, and input/output devices
-- **Applications:** Sensor monitoring, dashboards, automation, and connected devices
+- **Topics:** IoT, embedded systems, sensor monitoring, and electronics education
 
-## What You Can Learn
+## Table of Contents
 
-By exploring these projects, you can gain practical experience with:
+- [Getting Started](#getting-started)
+- [ESP8266 Sensor Projects](#esp8266-sensor-projects)
+- [What You Will Learn](#what-you-will-learn)
+- [Who Can Use These Projects](#who-can-use-these-projects)
+- [About KiwisIoT](#about-kiwisiot)
+- [Contributing](#contributing)
+- [License](#license)
 
-- Interfacing sensors and electronic modules with microcontrollers.
-- Reading analog and digital sensor data.
-- Programming compatible boards using the Arduino IDE.
-- Working with sensor libraries and communication interfaces.
-- Sending sensor readings and device status to an IoT platform.
-- Visualizing data using dashboard widgets.
+## Getting Started
+
+To start building an ESP8266 IoT project:
+
+1. Install the Arduino IDE.
+2. Configure the ESP8266 board package and select your NodeMCU board.
+3. Follow the [KiwisIoT Arduino Setup Guide](./kiwisiot-arduino-setup/).
+4. Connect the sensor according to the selected project's wiring instructions.
+5. Configure your Wi-Fi credentials and KiwisIoT dashboard settings in the example code.
+6. Upload the sketch, open the Serial Monitor, and check the readings on your dashboard.
+
+Review the individual project's README for its components, pin connections, library requirements, configuration, and testing procedure.
+
+## ESP8266 Sensor Projects
+
+These projects demonstrate how to interface sensors and electronic modules with an ESP8266 and monitor readings or status information through a KiwisIoT dashboard.
+
+| No. | Project | Description |
+|---|---|---|
+| 001 | [ESP8266 LDR Sensor IoT Project](./001-ldr-kiwisiot/) | Measure light intensity using an LDR sensor and monitor light levels on an IoT dashboard. |
+| 002 | [ESP8266 IR Sensor IoT Project](./002-ir-kiwisiot/) | Detect nearby objects using an infrared sensor module and display its status. |
+| 003 | [ESP8266 Ultrasonic Sensor IoT Project](./003-ultrasonic-kiwisiot/) | Measure distance using an ultrasonic sensor and visualize the readings. |
+| 004 | [ESP8266 DHT11 Temperature and Humidity Project](./004-dht11-kiwisiot/) | Read temperature and humidity using a DHT11 sensor. |
+| 005 | [ESP8266 PIR Motion Sensor IoT Project](./005-pir-kiwisiot/) | Detect motion and monitor movement status remotely. |
+| 006 | [ESP8266 Gas Sensor IoT Project](./006-gas-kiwisiot/) | Monitor the output of a gas sensor module and display sensor status. |
+| 007 | [ESP8266 Flame Sensor IoT Project](./007-flame-kiwisiot/) | Detect flame sensor output and monitor alert status. |
+| 008 | [ESP8266 Soil Moisture Sensor IoT Project](./008-soil-moisture-kiwisiot/) | Monitor soil moisture readings for plant and irrigation experiments. |
+| 009 | [ESP8266 Water Level Monitoring Project](./009-water-level-kiwisiot/) | Monitor water level using a compatible water-level sensor. |
+| 010 | [ESP8266 Rain Sensor IoT Project](./010-rain-sensor-kiwisiot/) | Detect rain or water on a raindrop sensor module. |
+| 011 | [ESP8266 Sound Sensor IoT Project](./011-sound-kiwisiot/) | Monitor sound sensor output and observe changes in sound activity. |
+| 012 | [ESP8266 MPU6050 IoT Project](./012-mpu6050-kiwisiot/) | Read motion and orientation-related measurements from an MPU6050 sensor. |
+| 013 | [ESP8266 Voltage Monitoring IoT Project](./013-voltage-kiwisiot/) | Measure voltage through a suitable, correctly scaled voltage-sensor circuit. |
+| 014 | [ESP8266 Current Monitoring IoT Project](./014-current-kiwisiot/) | Monitor current using an ACS712 current sensor module. |
+| 015 | [ESP8266 Vibration Sensor IoT Project](./015-vibration-kiwisiot/) | Detect vibration events using an SW-420 vibration sensor module. |
+| 016 | [ESP8266 Reed Switch IoT Project](./016-reed-switch-kiwisiot/) | Detect magnetic switching events using a reed switch. |
+| 017 | [ESP8266 Hall Effect Sensor IoT Project](./017-hall-effect-kiwisiot/) | Detect magnetic fields using a Hall effect sensor module. |
+| 018 | [ESP8266 Capacitive Touch Sensor IoT Project](./018-touch-kiwisiot/) | Detect touch input using a capacitive touch sensor module. |
+| 019 | [ESP8266 BMP180 Pressure and Temperature IoT Project](./019-bmp180-kiwisiot/) | Read atmospheric pressure and temperature using a BMP180 barometric sensor. |
+| 020 | [ESP8266 DS18B20 Temperature Monitoring IoT Project](./020-DS18B20-kiwisiot/) | Measure temperature using a DS18B20 digital temperature sensor. |
+
+## What You Will Learn
+
+By exploring these ESP8266 projects, you can gain practical experience with:
+
+- Interfacing sensors and electronic modules with an ESP8266 NodeMCU.
+- Writing and uploading Arduino sketches.
+- Reading analog and digital sensor outputs.
+- Using sensor libraries and communication interfaces such as I²C and OneWire where required.
+- Sending sensor readings and device status to an IoT dashboard.
+- Visualizing measurements and status information using suitable dashboard widgets.
 - Testing, troubleshooting, and extending embedded systems projects.
 
 ## Who Can Use These Projects?
 
-This repository is suitable for engineering students, beginners, educators, electronics hobbyists, makers, and developers exploring IoT and embedded systems.
+These projects are suitable for:
 
-Project requirements vary. Review the individual project documentation for its components, wiring, libraries, configuration, and testing instructions before assembling a circuit.
+- Engineering students working on IoT and embedded systems experiments.
+- Beginners learning ESP8266 and Arduino programming.
+- Educators preparing sensor-based demonstrations.
+- Electronics hobbyists building connected devices.
+- Developers exploring sensor monitoring and IoT dashboard integration.
+
+Component requirements, circuit connections, code, and difficulty vary by project. Follow the individual project documentation before assembling a circuit.
 
 ## About KiwisIoT
 
-[KiwisIoT](https://kiwisiot.in/) is an IoT platform for connecting devices, sending data, and visualizing information through dashboards. These projects demonstrate practical ways to integrate microcontrollers and sensors with KiwisIoT for learning, prototyping, monitoring, and connected-device applications.
+[KiwisIoT](https://kiwisiot.in/) is an IoT platform for connecting devices, sending data, and visualizing information through dashboards. These examples demonstrate ways to use KiwisIoT with ESP8266-based sensor projects for learning, prototyping, and monitoring applications.
 
 Visit the [KiwisIoT website](https://kiwisiot.in/) to learn more about the platform.
 
-## Repository Structure
-
-```text
-KiwisIoT-Projects/
-├── esp8266/
-│   ├── kiwisiot-arduino-setup/
-│   ├── ... project folders ...
-│   └── README.md
-├── LICENSE
-└── README.md
-```
-
-The `esp8266/` directory contains the ESP8266 project collection, setup guide, and detailed project index. As the repository grows, additional project collections can be linked from this page.
-
 ## Contributing
 
-Suggestions, documentation improvements, and bug reports are welcome. When reporting an issue, include the relevant project name, hardware configuration, and steps to reproduce the problem.
+Suggestions, corrections, and improvements are welcome. When reporting an issue, include the project name and relevant hardware configuration, and describe the steps needed to reproduce the problem.
 
 ## License
 
-This repository is distributed under the terms described in the [LICENSE](./LICENSE) file.
+Refer to the repository's [LICENSE](../LICENSE) file for the applicable terms of use and distribution.
