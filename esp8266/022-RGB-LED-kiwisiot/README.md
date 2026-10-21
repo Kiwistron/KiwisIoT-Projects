@@ -1190,4 +1190,4 @@ With an Input widget on the dashboard, the project provides a practical introduc
 
 ## 📄 License
 
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+This project is licensed under the MIT License. See the [LICENSE](../../LICENSE) file for details. 
