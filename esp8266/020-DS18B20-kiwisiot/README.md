@@ -875,8 +875,6 @@ For example, combining the DS18B20 with a humidity sensor could provide addition
     └── dashboard-output.png
 ```
 
-Keep the Arduino source code and screenshots in the specified folders so the relative image paths in the README work correctly.
-
 ---
 
 ## 🔗 Related KiwisIoT ESP8266 Projects
